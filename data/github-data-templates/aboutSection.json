@@ -1,0 +1,19 @@
+{
+  "aboutSectionLinks": [
+    {
+      "href": "https://github.com/Astrogeek77",
+      "icon": "fab fa-github",
+      "name": "Github"
+    },
+    {
+      "href": "https://codepen.io/Astrogeek77",
+      "icon": "fab fa-codepen",
+      "name": "CodePen"
+    },
+    {
+      "href": "https://igautamjain.hashnode.dev",
+      "icon": "fab fa-hashnode",
+      "name": "Blog"
+    }
+  ]
+}

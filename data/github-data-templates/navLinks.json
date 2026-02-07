@@ -1,0 +1,32 @@
+{
+  "resumeNavLink": {
+    "name": "Resume drive link",
+    "href": "https://drive.google.com/your-resume-link",
+    "text": "Resume PDF"
+  },
+  "blogNavLink": {
+    "name": "Blog Showcase Page Link",
+    "href": "./blogs",
+    "text": "Blog Showcase"
+  },
+  "webLinkTreeNavLink": {
+    "name": "Web Linktree Page Link",
+    "href": "./linktree",
+    "text": "Web Linktree"
+  },
+  "projectShowcaseNavLink": {
+    "name": "Project Showcase Page Link",
+    "href": "./projects",
+    "text": "Projects Showcase"
+  },
+  "resumeShowcaseNavLink": {
+    "name": "Resume Showcase Page Link",
+    "href": "./resume",
+    "text": "Resume Showcase"
+  },
+  "contactNavLink": {
+    "name": "Contact Link",
+    "href": "#contact",
+    "text": "Contact"
+  }
+}
