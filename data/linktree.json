@@ -39,7 +39,7 @@
     { "name": "WebDev 22-23", "href": "https://github.com/Astrogeek77/Web_Dev_2023", "icon": "fas fa-code" },
     { "name": "DSALGO", "href": "https://github.com/Astrogeek77/DSALGO-and-CP", "icon": "fas fa-code" },
     { "name": "Glassmorphism", "href": "https://github.com/Astrogeek77/Glassmorphism", "icon": "fas fa-code" },
-    { "name": "Leetcode-GFG Solutions", "href": "https://github.com/Astrogeek77/Leetcode_GFG_solutions", "icon": "fas fa-code" },
+    { "name": "Leetcode-GFG Solutions", "href": "https://github.com/Astrogeek77/Leetcode_GFG_solutions", "icon": "fas fa-code" }
   ],
   "otherLinks": [
     { "name": "Mail Me", "href": "mailto:igautamjain12345@gmail.com", "icon": "fas fa-envelope" },
