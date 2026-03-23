@@ -1,0 +1,40 @@
+{
+  "certifications": [
+    {
+      "name": "Oracle Database Developer",
+      "src": "/images/certificates/Oracle Database SQL Certified Associate.webp",
+      "href": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=94C6BD056597EEB477ACDC10EEB68DF42DB3B9EB7294C9D2A244F2B3F85563C7",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Certificates/Oracle%20Database%20SQL%20Certified%20Associate.webp"
+    },
+    {
+      "name": "Web Dev Bootcamp",
+      "src": "/images/certificates/web-dev-certificate.webp",
+      "href": "https://drive.google.com/file/d/13EHO6s4GSMPmGeT0QzJJiqEQ6MtvfUOh/view?usp=sharing",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/web-dev-certificate.webp"
+    },
+    {
+      "name": "Appreciation CERT. TNP, GNDEC",
+      "src": "/images/certificates/tnp-appreciation.webp",
+      "href: "https://drive.google.com/file/d/1YPJLcyBudNgqY0zguYGVhD18mAScN1Ez/view?usp=sharing",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/tnp-appreciation.webp"
+    },
+    {
+      "name": "SDE Internship",
+      "src": "/images/certificates/internship-certificate.webp",
+      "href": "https://drive.google.com/file/d/1XG3EuGCECOmkdoDR16tiC75Os2Ky-sEh/view?usp=sharing",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/internship-certificate.webp"
+    },
+    {
+      "name": "Flutter",
+      "src": "/images/certificates/flutter_certificate.webp",
+      "href": "https://drive.google.com/file/d/1baSaUbCRMZu-gShuiDI1re3yXM05QBnB/view?usp=sharing",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/flutter_certificate.webp"
+    },
+    {
+      "name": "CPP",
+      "src": "/images/certificates/cpp-certificate.webp",
+      "href": "https://drive.google.com/file/d/1iR1eKcGLPAUhk6NgovpgSxRJFmhKO6Rk/view?usp=sharing\"",
+      "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/cpp-certificate.webp"
+    }
+  ]
+}

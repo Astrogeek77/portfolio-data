@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ultimateGitHandbook",
+    "name": "Ultimate Git Handbook",
+    "src": "/images/blogs/git-handbook.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/git-handbook.webp",
+    "href": "https://igautamjain.hashnode.dev/ultimate-git-handbook",
+    "class": "box git",
+    "tags": ["git"],
+    "date": "08-09-2023",
+    "rating": 9.5
+  },
+  {
+    "id": "vanillaProjects",
+    "name": "15+ Projects to master HTML, CSS and JS with source code",
+    "src": "/images/blogs/vanilla-projects.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/vanilla-projects.webp",
+    "href": "https://igautamjain.hashnode.dev/15-projects-to-master-html-css-and-js-with-source-code",
+    "class": "box vanilla css",
+    "tags": ["project", "css"],
+    "date": "23-07-2023",
+    "rating": 8.5
+  },
+  {
+    "id": "cssTools",
+    "name": "Amazing CSS tools",
+    "src": "/images/blogs/css-tools.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/css-tools.webp",
+    "href": "https://igautamjain.hashnode.dev/amazing-css-tools",
+    "class": "box css vanilla",
+    "tags": ["css", "tools", "free"],
+    "date": "15-02-2023",
+    "rating": 8.2
+  },
+  {
+    "id": "freeCSSAPis",
+    "name": "Best Free APIs for your Frontend Projects",
+    "src": "/images/blogs/free-apis.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/free-apis.webp",
+    "href": "https://igautamjain.hashnode.dev/best-free-apis-for-your-frontend-projects",
+    "class": "box others web",
+    "tags": ["projects", "web"],
+    "date": "14-02-2023",
+    "rating": 8.3
+  },
+  {
+    "id": "reactHooks",
+    "name": "Custom React Hooks",
+    "src": "/images/blogs/react-hooks.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/react-hooks.webp",
+    "href": "https://igautamjain.hashnode.dev/custom-react-hooks",
+    "class": "box web",
+    "tags": ["web", "react", "hooks"],
+    "date": "20-02-2023",
+    "rating": 8.8
+  },
+  {
+    "id": "jsQueuemicrostack",
+    "name": "JavaScript queueMicrotask()",
+    "src": "/images/blogs/js-queuemicrostack.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/js-queuemicrostack.webp",
+    "href": "https://igautamjain.hashnode.dev/javascript-queuemicrotask",
+    "class": "box web",
+    "tags": ["web", "js", "javascript"],
+    "date": "15-01-2023",
+    "rating": 8.1
+  },
+  {
+    "id": "p2pCycle",
+    "name": "Procure to Payment (P2P) Cycle Guide",
+    "src": "/images/blogs/compressed/p2p.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/p2p.png",
+    "href": "https://igautamjain.hashnode.dev/p2p-cycle",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "p2p", "procure to payment"],
+    "date": "07-07-2024",
+    "rating": 9.1
+  },
+  {
+    "id": "o2cCycle",
+    "name": "Order to Cash (O2C) Cycle Guide",
+    "src": "/images/blogs/compressed/o2c.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/o2c.png",
+    "href": "https://igautamjain.hashnode.dev/o2c-cycle",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "o2c", "order to cash"],
+    "date": "14-07-2024",
+    "rating": 9.0
+  },
+  {
+    "id": "inboundInterface",
+    "name": "Inbound Interface Guide",
+    "src": "/images/blogs/compressed/inbound-interface.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/inbound-interface.png",
+    "href": "https://igautamjain.hashnode.dev/inbound-interface",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "interface", "inbound-interface", "inbound"],
+    "date": "18-07-2024",
+    "rating": 8.8
+  },
+  {
+    "id": "outboundInterface",
+    "name": "Outbound Interface Guide",
+    "src": "/images/blogs/compressed/outbound-interface.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/outbound-interface.png",
+    "href": "https://igautamjain.hashnode.dev/outbound-interface",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "interface", "outbound-interface", "outbound"],
+    "date": "20-07-2024",
+    "rating": 8.9
+  },
+  {
+    "id": "InterfaceConversion",
+    "name": "Interface/Conversion Example Guide",
+    "src": "/images/blogs/compressed/interface-conversion-examples.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/interface-conversion-examples.png",
+    "href": "https://igautamjain.hashnode.dev/interface-conversion-examples",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "interface", "inbound", "outbound-interface", "outbound", "conversion"],
+    "date": "21-07-2024",
+    "rating": 8.2
+  },
+  {
+    "id": "oracleXMLBIPublisher",
+    "name": "Oracle XML and BI Publisher with Oracle Apps",
+    "src": "/images/blogs/compressed/bipublisher.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/bipublisher.png",
+    "href": "https://igautamjain.hashnode.dev/oracle-xml-bi-publisher",
+    "class": "box oracle",
+    "tags": ["oracle", "oracle apps", "sql", "plsql", "publisher", "xml", "bi"],
+    "date": "28-07-2024",
+    "rating": 8.85
+  }
+]
