@@ -1,0 +1,66 @@
+{
+  "footerLinks1": [
+    {
+      "name": "Leetcode Profile",
+      "href": "https://leetcode.com/LeetCodeMachiene/",
+      "text": "Leetcode"
+    },
+    {
+      "name": "GFG profile",
+      "href": "https://auth.geeksforgeeks.org/user/astrogeek77/",
+      "text": "GFG"
+    },
+    {
+      "name": "hashnode blog",
+      "href": "https://igautamjain.hashnode.dev/",
+      "text": "My Blog"
+    },
+    {
+      "name": "Linkedin Profile",
+      "href": "https://linkedin.com/in/astrogeek77",
+      "text": "Linkedin"
+    },
+    {
+      "name": "Discord Link",
+      "href": "https://discordapp.com/users/578628281708969996",
+      "text": "Discord"
+    },
+    {
+      "name": "Github Link",
+      "href": "https://github.com/astrogeek77",
+      "text": "Github"
+    },
+    {
+      "name": "Buy Me a Hot Coffee",
+      "href": "https://buymeacoffee.com/astrogeek77",
+      "text": "Buy Me a Coffee"
+    }
+  ],
+  "footerLinks2": [
+    {
+      "name": "Home Footer Page Link",
+      "href": "./",
+      "text": "Home"
+    },
+    {
+      "name": "Resume Showcase Page Footer Link",
+      "href": "./resume",
+      "text": "Resume Page"
+    },
+    {
+      "name": "Project Showcase Page Footer Link",
+      "href": "./projects",
+      "text": "Projects Page"
+    },
+    {
+      "name": "Linktree Page Footer Link",
+      "href": "./linktree",
+      "text": "Linktree Page"
+    },
+    {
+      "name": "blog Showcase Page Footer Link",
+      "href": "./blogs",
+      "text": "Blogs Page"
+    }
+  ]
+}
