@@ -1,5 +1,5 @@
 {
-  "ResumeLink": "{{RESUME}}",
+  "ResumeLink": "{{RESUME_LINK}}",
   "resumeShowcaseLinks": [
     { "name": "Github-link", "href": "https://github.com/astrogeek77", "text": "My Github" },
     { "name": "hashnode blog", "href": "https://igautamjain.hashnode.dev/", "text": "My Blog" },
