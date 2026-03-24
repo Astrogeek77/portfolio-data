@@ -1,5 +1,5 @@
 {
-  "ResumeLink": "https://drive.google.com/file/d/1GQdH6TGBGtj51bWJRZpg4MgdaC8swRbi/view",
+  "ResumeLink": "{{RESUME}}",
   "resumeShowcaseLinks": [
     { "name": "Github-link", "href": "https://github.com/astrogeek77", "text": "My Github" },
     { "name": "hashnode blog", "href": "https://igautamjain.hashnode.dev/", "text": "My Blog" },
