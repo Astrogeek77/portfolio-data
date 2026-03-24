@@ -1,0 +1,32 @@
+{
+  "blogShowcaseButtons": [
+    { "filter": "css", "name": "CSS" },
+    { "filter": "web", "name": "Web Dev / JS" },
+    { "filter": "project", "name": "Projects" },
+    { "filter": "git", "name": "Git" },
+    { "filter": "oracle", "name": "Oracle APPS" },
+    { "filter": "interface", "name": "Oracle Interfaces" }
+  ],
+  "blogShowcaseLinks": [
+    {
+      "name": "github-link",
+      "href": "https://github.com/astrogeek77",
+      "text": "My Github"
+    },
+    {
+      "name": "Codepen profile",
+      "href": "https://codepen.io/astrogeek77/",
+      "text": "Codepen"
+    },
+    {
+      "name": "Resume Link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "My Resume"
+    },
+    {
+      "name": "Blog Link",
+      "href": "https://igautamjain.hashnode.dev",
+      "text": "Hashnode Blog"
+    }
+  ]
+}
