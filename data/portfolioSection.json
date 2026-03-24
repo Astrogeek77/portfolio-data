@@ -1,0 +1,78 @@
+{
+  "portfolioSectionButtons": [
+    { "filter": "all", "name": "All" },
+    { "filter": "mern", "name": "MERN Projects" },
+    { "filter": "css", "name": "CSS" },
+    { "filter": "java", "name": "Java Projects" },
+    { "filter": "live", "name": "Ongoing" }
+  ],
+  "portfolioProjects": [
+    {
+      "id": "bookHubProject",
+      "name": "Bookhub with recommendation system (Major)",
+      "class": "box mern team",
+      "src": "/images/apps/bookhub.webp",
+      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/bookhub.webp",
+      "href": "https://github.com/GNDEC-Minor-Project-KGJ",
+      "tags": ["mern", "team", "major project", "react", "mongodb"],
+      "date": "17-12-2022",
+      "rating": 9.0
+    },
+    {
+      "id": "hospitalManagmentSystemProject",
+      "name": "Hospital Managment System Webapp (JSP + servlets)",
+      "class": "box java solo",
+      "src": "/images/apps/HMS.webp",
+      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/HMS.webp",
+      "href": "https://github.com/Astrogeek77/Hospital_Management_System",
+      "tags": ["java", "solo", "servlets", "jsp", "mysql"],
+      "date": "13-08-2023",
+      "rating": 8.75
+    },
+    {
+      "id": "tnpgndecProject",
+      "name": "TNP, GNDEC Website",
+      "class": "box team mern",
+      "src": "/images/apps/tnp-website.webp",
+      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/tnp-website.webp",
+      "href": "https://tnpgndec.com",
+      "tags": ["team", "mern", "reactjs", "mysql"],
+      "date": "26-12-2022",
+      "rating": 8.8
+    },
+    {
+      "id": "webProjects2023",
+      "name": "Web Mini Projects 2023",
+      "class": "box live fun challenges original css",
+      "src": "/images/live/wd-23.webp",
+      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/live/wd-23.webp",
+      "href": "https://github.com/Astrogeek77/Web_Dev_2023",
+      "tags": ["live", "fun", "challenges", "css", "mini projects"],
+      "date": "29-12-2023",
+      "rating": 8.4
+    },
+    {
+      "id": "DSALGOCodebase",
+      "name": "DS-ALGO-CP Codebase",
+      "class": "box code cpp",
+      "src": "/images/code/dsalgo-cp.webp",
+      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/dsalgo-cp.webp",
+      "href": "https://github.com/Astrogeek77/DSALGO-and-CP",
+      "tags": ["code", "cpp", "data structures", "algorithms"],
+      "date": "24-12-2023",
+      "rating": 8.9
+    }
+  ],
+  "portfolioSectionLinks": [
+    {
+      "name": "Project Showcase Page",
+      "href": "./projects",
+      "text": "Project Showcase"
+    },
+    {
+      "name": "Blog Showcase Page",
+      "href": "./blogs",
+      "text": "Blog Showcase"
+    }
+  ]
+}
