@@ -30,7 +30,7 @@
     },
     {
       "name": "Resume Link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "My Resume"
     }
   ]
