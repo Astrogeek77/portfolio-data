@@ -2,7 +2,7 @@
   "primaryNavLinksHome": [
     {
       "name": "Resume drive link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "Resume PDF"
     },
     {
@@ -29,7 +29,7 @@
   "primaryNavLinksPS": [
     {
       "name": "Resume drive link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "Resume PDF"
     },
     {
@@ -56,7 +56,7 @@
   "primaryNavLinksWLT": [
     {
       "name": "Resume drive link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "Resume PDF"
     },
     {
@@ -83,7 +83,7 @@
   "primaryNavLinksRS": [
     {
       "name": "Resume drive link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "Resume PDF"
     },
     {
@@ -110,7 +110,7 @@
   "primaryNavLinksBS": [
     {
       "name": "Resume drive link",
-      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "href": "{{RESUME}}",
       "text": "Resume PDF"
     },
     {
