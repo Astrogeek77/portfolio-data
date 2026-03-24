@@ -1,0 +1,37 @@
+{
+  "portfolioShowcaseButtons": [
+    { "filter": "mern", "name": "MERN" },
+    { "filter": "cpp", "name": "C++" },
+    { "filter": "python", "name": "Python" },
+    { "filter": "java", "name": "Java" },
+    { "filter": "css", "name": "CSS" },
+    { "filter": "live", "name": "Live" },
+    { "filter": "flutter", "name": "Flutter" },
+    { "filter": "solo", "name": "Solo" },
+    { "filter": "code", "name": "DSALGO / CP" },
+    { "filter": "react", "name": "ReactJs" },
+    { "filter": "fun", "name": "Fun" },
+    { "filter": "mongodb", "name": "MongoDB" },
+    { "filter": "mysql", "name": "SQL" },
+    { "filter": "original", "name": "Originals" },
+    { "filter": "team", "name": "Teamwork" },
+    { "filter": "oracle", "name": "Oracle" }
+  ],
+  "portfolioShowcaseLinks": [
+    {
+      "name": "github-link",
+      "href": "https://github.com/astrogeek77",
+      "text": "My Github"
+    },
+    {
+      "name": "Codepen profile",
+      "href": "https://codepen.io/astrogeek77/",
+      "text": "Codepen"
+    },
+    {
+      "name": "Resume Link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "My Resume"
+    }
+  ]
+}
