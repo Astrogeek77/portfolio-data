@@ -1,60 +1,10 @@
 {
-  "featuredBlogs": [
-    {
-      "id": "ultimateGitHandbook",
-      "name": "Ultimate Git Handbook",
-      "src": "/images/blogs/git-handbook.webp",
-      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/git-handbook.webp",
-      "href": "https://igautamjain.hashnode.dev/ultimate-git-handbook",
-      "class": "box git",
-      "tags": ["git"],
-      "date": "08-09-2023",
-      "rating": 9.5
-    },
-    {
-      "id": "reactHooks",
-      "name": "Custom React Hooks",
-      "src": "/images/blogs/react-hooks.webp",
-      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/react-hooks.webp",
-      "href": "https://igautamjain.hashnode.dev/custom-react-hooks",
-      "class": "box web",
-      "tags": ["web", "react", "hooks"],
-      "date": "20-02-2023",
-      "rating": 8.8
-    },
-    {
-      "id": "p2pCycle",
-      "name": "Procure to Payment (P2P) Cycle Guide",
-      "src": "/images/blogs/compressed/p2p.webp",
-      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/p2p.png",
-      "href": "https://igautamjain.hashnode.dev/p2p-cycle",
-      "class": "box oracle",
-      "tags": ["oracle", "oracle apps", "sql", "plsql", "p2p", "procure to payment"],
-      "date": "07-07-2024",
-      "rating": 9.1
-    },
-    {
-      "id": "o2cCycle",
-      "name": "Order to Cash (O2C) Cycle Guide",
-      "src": "/images/blogs/compressed/o2c.webp",
-      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/o2c.png",
-      "href": "https://igautamjain.hashnode.dev/o2c-cycle",
-      "class": "box oracle",
-      "tags": ["oracle", "oracle apps", "sql", "plsql", "o2c", "order to cash"],
-      "date": "14-07-2024",
-      "rating": 9.0
-    },
-    {
-      "id": "oracleXMLBIPublisher",
-      "name": "Oracle XML and BI Publisher with Oracle Apps",
-      "src": "/images/blogs/compressed/bipublisher.webp",
-      "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/blogs/bipublisher.png",
-      "href": "https://igautamjain.hashnode.dev/oracle-xml-bi-publisher",
-      "class": "box oracle",
-      "tags": ["oracle", "oracle apps", "sql", "plsql", "publisher", "xml", "bi"],
-      "date": "28-07-2024",
-      "rating": 8.85
-    }
+ "featuredBlogIds": [
+    "ultimateGitHandbook",
+    "reactHooks",
+    "p2pCycle",
+    "o2cCycle",
+    "oracleXMLBIPublisher"
   ],
   "blogSectionLinks": [
     {
