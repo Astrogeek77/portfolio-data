@@ -30,7 +30,7 @@
     },
     {
       "name": "Resume Link",
-      "href": "{{RESUME}}",
+      "href": "{{RESUME_LINK}}",
       "text": "My Resume"
     }
   ]
