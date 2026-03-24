@@ -1,0 +1,137 @@
+{
+  "primaryNavLinksHome": [
+    {
+      "name": "Resume drive link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "Resume PDF"
+    },
+    {
+      "name": "Project Showcase Page Link",
+      "href": "./projects",
+      "text": "Projects Showcase"
+    },
+    {
+      "name": "Web Linktree Page Link",
+      "href": "./linktree",
+      "text": "Web Linktree"
+    },
+    {
+      "name": "Resume Showcase Page Link",
+      "href": "./resume",
+      "text": "Resume Showcase"
+    },
+    {
+      "name": "Blog Showcase Page Link",
+      "href": "./blogs",
+      "text": "Blog Showcase"
+    }
+  ],
+  "primaryNavLinksPS": [
+    {
+      "name": "Resume drive link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "Resume PDF"
+    },
+    {
+      "name": "Home Page Link",
+      "href": "./",
+      "text": "Home Page"
+    },
+    {
+      "name": "Web Linktree Page Link",
+      "href": "./linktree",
+      "text": "Web Linktree"
+    },
+    {
+      "name": "Resume Showcase Page Link",
+      "href": "./resume",
+      "text": "Resume Showcase"
+    },
+    {
+      "name": "Blog Showcase Page Link",
+      "href": "./blogs",
+      "text": "Blog Showcase"
+    }
+  ],
+  "primaryNavLinksWLT": [
+    {
+      "name": "Resume drive link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "Resume PDF"
+    },
+    {
+      "name": "Home Page Link",
+      "href": "./",
+      "text": "Home Page"
+    },
+    {
+      "name": "Project Showcase Page Link",
+      "href": "./projects",
+      "text": "Projects Showcase"
+    },
+    {
+      "name": "Resume Showcase Page Link",
+      "href": "./resume",
+      "text": "Resume Showcase"
+    },
+    {
+      "name": "Blog Showcase Page Link",
+      "href": "./blogs",
+      "text": "Blog Showcase"
+    }
+  ],
+  "primaryNavLinksRS": [
+    {
+      "name": "Resume drive link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "Resume PDF"
+    },
+    {
+      "name": "Home Page Link",
+      "href": "./",
+      "text": "Home Page"
+    },
+    {
+      "name": "Project Showcase Page Link",
+      "href": "./projects",
+      "text": "Projects Showcase"
+    },
+    {
+      "name": "Web Linktree Page Link",
+      "href": "./linktree",
+      "text": "Web Linktree"
+    },
+    {
+      "name": "Blog Showcase Page Link",
+      "href": "./blogs",
+      "text": "Blog Showcase"
+    }
+  ],
+  "primaryNavLinksBS": [
+    {
+      "name": "Resume drive link",
+      "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view",
+      "text": "Resume PDF"
+    },
+    {
+      "name": "Home Page Link",
+      "href": "./",
+      "text": "Home Page"
+    },
+    {
+      "name": "Project Showcase Page Link",
+      "href": "./projects",
+      "text": "Projects Showcase"
+    },
+    {
+      "name": "Web Linktree Page Link",
+      "href": "./linktree",
+      "text": "Web Linktree"
+    },
+    {
+      "name": "Resume Showcase Page Link",
+      "href": "./resume",
+      "text": "Resume Showcase"
+    }
+  ]
+}
