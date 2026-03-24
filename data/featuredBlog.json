@@ -4,7 +4,8 @@
     "reactHooks",
     "p2pCycle",
     "o2cCycle",
-    "oracleXMLBIPublisher"
+    "oracleXMLBIPublisher",
+    "cssTools"
   ],
   "blogSectionLinks": [
     {
