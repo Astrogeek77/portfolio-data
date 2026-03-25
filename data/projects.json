@@ -515,5 +515,16 @@
     "tags": ["box", "oracle", "ebs", "eps", "training", "cognizant", "p2p", "o2c", "interface", "conversion", "reports"],
     "date": "13-07-2024",
     "rating": 8.3
+  },
+   {
+    "id": "SpringBootCodebase",
+    "class": "box java spring springboot design patterns",
+    "src": "/images/apps/video-chat-app.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Spring_boot_Codebase",
+    "name": "Spring Boot Codebase",
+    "tags": ["box", "java", "spring", "spring boot", "core java", "development", "design patterns"],
+    "date": "15-02-2026",
+    "rating": 9.0
   }
 ]
