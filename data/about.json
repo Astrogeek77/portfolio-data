@@ -18,15 +18,17 @@
   ],
   "codingSkills": [
     { "name": "Javascript", "percentage": 85 },
-    { "name": "Java", "percentage": 75 },
-    { "name": "SQL-PL/SQL", "percentage": 70 },
+    { "name": "Java", "percentage": 85 },
+    { "name": "SQL-PL/SQL", "percentage": 80 },
     { "name": "Dart", "percentage": 60 },
-    { "name": "Python", "percentage": 65 }
+    { "name": "Python", "percentage": 65 },
+    { "name": "Spring Boot", "percentage": 75 },
   ],
   "professionalSkills": [
     { "name": "Web Development", "percentage": 85 },
     { "name": "Mobile Development", "percentage": 55 },
     { "name": "Core Skills", "percentage": 80 },
+    { "name": "Databases", "percentage": 70 }
     { "name": "Japanese", "percentage": 30 },
     { "name": "French/Spanish", "percentage": 30 }
   ],
