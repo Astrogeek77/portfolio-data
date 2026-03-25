@@ -1,7 +1,6 @@
 {
   "RESUME_LINK": "https://drive.google.com/file/d/1GQdH6TGBGtj51bWJRZpg4MgdaC8swRbi/view",
-  "socials": {
-    "github": "https://github.com/astrogeek77",
-    "linkedin": "https://linkedin.com/in/astrogeek77"
-  }
+  "GITHUB_LINK": "https://github.com/astrogeek77",
+  "CODEPEN_LINK": "https://codepen.io/astrogeek77/",
+  "BLOG_LINK": "https://igautamjain.hashnode.dev/"
 }
