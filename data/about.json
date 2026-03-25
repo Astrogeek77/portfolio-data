@@ -22,7 +22,7 @@
     { "name": "SQL-PL/SQL", "percentage": 80 },
     { "name": "Dart", "percentage": 60 },
     { "name": "Python", "percentage": 65 },
-    { "name": "Spring Boot", "percentage": 75 },
+    { "name": "Spring Boot", "percentage": 75 }
   ],
   "professionalSkills": [
     { "name": "Web Development", "percentage": 85 },
