@@ -28,7 +28,7 @@
     { "name": "Web Development", "percentage": 85 },
     { "name": "Mobile Development", "percentage": 55 },
     { "name": "Core Skills", "percentage": 80 },
-    { "name": "Databases", "percentage": 70 }
+    { "name": "Databases", "percentage": 70 },
     { "name": "Japanese", "percentage": 30 },
     { "name": "French/Spanish", "percentage": 30 }
   ],
