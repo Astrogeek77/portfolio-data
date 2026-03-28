@@ -29,5 +29,6 @@
       "text": "Resume Showcase"
     }
   ],
-  "homeparagraph": `<b>Programmer Analyst</b> at <strong>Cognizant</strong>, <b style=\"text-transform: none;\"> B.Tech in CSE</b>. I am currently working with technologies <strong> like Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, JSP, JDBC, Spring, Docker </strong> etc. I am always open to opportunities to further polish my skills and participate in <strong style=\"text-transform: none;\"> technology, project ideas, and business discussions.</strong>`
+  {
+  "homeparagraph": "<b>Programmer Analyst</b> at <strong>Cognizant</strong>, <b style=\"text-transform: none;\"> B.Tech in CSE</b>. I am currently working with technologies <strong> like Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, JSP, JDBC, Spring, Docker </strong> etc. I am always open to opportunities to further polish my skills and participate in <strong style=\"text-transform: none;\"> technology, project ideas, and business discussions.</strong>"
 }
