@@ -6,5 +6,28 @@
     "Looking for product-based roles",
     "Astronomy Lover",
     "Tech Enthusiast"
-  ]
+  ],
+  "homeSectionLinks": [
+    {
+      "name": "Web Linktree Page Link",
+      "href": "./linktree",
+      "text": "Web Linktree"
+    },
+    {
+      "name": "Contact Section Link",
+      "href": "#contact",
+      "text": "Contact Me"
+    },
+    {
+      "name": "Latest Project Section Link",
+      "href": "#portfolio",
+      "text": "My Projects"
+    },
+    {
+      "name": "Resume Showcase Page Link",
+      "href": "./resume",
+      "text": "Resume Showcase"
+    }
+  ],
+  "homeparagraph": "<b>Programmer Analyst</b> at <strong>Cognizant</strong>, <b style=\"text-transform: none;\"> B.Tech in CSE</b>. I am currently working with technologies <strong> like Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, JSP, JDBC, Spring, Docker </strong> etc. I am always open to opportunities to further polish my skills and participate in <strong style=\"text-transform: none;\"> technology, project ideas, and business discussions.</strong>"
 }
