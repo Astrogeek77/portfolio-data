@@ -36,5 +36,18 @@
       "href": "https://drive.google.com/file/d/1iR1eKcGLPAUhk6NgovpgSxRJFmhKO6Rk/view?usp=sharing\"",
       "fallbackImg": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/Certificates/cpp-certificate.webp"
     }
+  ],
+  "skillSectionLinks": [
+    {
+      "name": "Certifications",
+      "iconClass": "fas fa-link",
+      "href": "{{CERTIFICATION_LINK}}",
+      "text": "View My Certifications."
+    },
+    {
+      "name": "Linktree",
+      "href": "{{LINKTREE_LINK}}",
+      "text": "All My Links"
+    }
   ]
 }
