@@ -53,5 +53,80 @@
     "Japanese/French/Spanish",
     "Power BI",
     "AI Tools"
-  ]
+  ],
+  "aboutParagraph": `<p>
+          Hi, my name is Gautam Jain. I am a Tech and Space Enthusiast. I am a
+          CSE Major, and currently, I am working as a PA in Cognizant.
+          <br />
+          <br />
+          I have been fascinated by the wondrous aspects of technology ever
+          since I was a kid, and after getting my personal computer after 12th grade
+          standard, my interest skyrocketed.
+          <br />
+          <br />I was so amazed by the cool operations one can perform using
+          such small machines as a laptop and a phone. I begin to dive deep
+          into the concepts of computer science, and to get more proficient
+          in the field, enrolled for a
+          <b style={{ textTransform: 'none' }}> Computer Science Undergraduate</b> degree.
+          <br />
+          <br />
+        </p>
+        <p
+          className={showCollapsed ? '' : 'collapsible'}
+          style={{ textTransform: 'none' }}
+        >
+          I graduated with my bachelor's degree from <b> GNDEC, Ludhiana</b> in
+          August 2023. Throughout my course of 4 years, I invested in developing
+          a good understanding of core computer science concepts like
+          <b style={{ textTransform: 'none' }}>
+            Discrete Mathematics, Data Structures and Algorithms, Operating Systems
+            systems, Database management, CAM, Cyber Security, Compiler Design
+          </b>{' '}
+          etc.
+          <br />
+          <br />
+          Along with my academics, I also invested in developing my problem-solving
+          solving skills by actively indulging in competitive tournaments on
+          platforms like
+          <b style={{ textTransform: 'none' }}>
+            GeeksforGeeks, Leetcode, Code Studio, Hacker Rank, Code chef and
+            also made a routine of solving daily problems and challenges
+          </b>{' '}
+          .<br />
+          <br />I worked together with my team (college friends and work
+          colleagues) to create innovative, scalable, and open-source projects
+          and gained experience in software development by working as a student
+          <b style={{ textTransform: 'none' }}>
+            SDE intern at E-Cell, TNP Cell, and 11 mantras
+          </b>
+          .<br />
+          <br />I am currently working as a{' '}
+          <b style={{ textTransform: 'none' }}>
+            Programmer Analyst trainee at Cognizant Technology Solutions
+          </b>
+          , brushing up on my skills in technologies like
+          <b>
+            Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, JSP, JDBC, Spring
+          </b>{' '}
+          etc.
+          <br />
+          <br />
+          I am always open to opportunities to further polish my skills and get
+          an insight into how the daily world functions with the help of
+          technology.
+          <br />
+          <b style={{ textTransform: 'none' }}>
+            Actively looking for open technology and project idea discussions.
+          </b>
+          <br />
+          <br />
+        </p>
+        <button
+          style={{ cursor: 'pointer' }}
+          onClick={toggleCollapse}
+          className="about-text-toggle btn"
+          title="Read more about me :)"
+        >
+          {showCollapsed ? 'Read Less' : 'Read More'}
+        </button>`
 }
