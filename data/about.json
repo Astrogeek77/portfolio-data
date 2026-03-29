@@ -68,7 +68,7 @@
         "Collaborated with professional trainers and passed routine technical assessments and interviews.",
         "Applied theoretical knowledge to practical usage projects during the intensive training phase."
       ],
-      "techStack": ["SQL", "PL/SQL", "Oracle Apps"]
+      "techStack": ["SQL", "PL/SQL", "Oracle Apps", "Java", "Spring Boot"]
     },
     {
       "id": 2,
@@ -81,7 +81,7 @@
         "Developed and maintained responsive web layouts for a seamless user experience.",
         "Managed a team of junior students, facilitating weekly feature planning and task delegation."
       ],
-      "techStack": ["React.js", "Node.js", "MongoDB", "Express.js"]
+      "techStack": ["React.js", "Node.js", "MongoDB", "Express.js", "Docker", "Microservices"]
     },
     {
       "id": 3,
@@ -100,10 +100,10 @@
   "education": [
     {
       "id": 1,
-      "degree": "Bachelors in Computer Science",
+      "degree": "Bachelor's in Computer Science",
       "institution": "GNDEC, Ludhiana",
       "duration": "2019 - 2023",
-      "description": "Focused on core Computer Science fundamentals including DSA, DBMS, and Operating Systems while maintaining active participation in competitive programming."
+      "description": "Focused on core Computer Science fundamentals, including DSA, DBMS, and Operating Systems, while maintaining active participation in competitive programming."
     }
   ]
 }
