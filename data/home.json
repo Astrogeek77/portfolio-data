@@ -10,22 +10,22 @@
   "homeSectionLinks": [
     {
       "name": "Web Linktree Page Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
       "name": "Contact Section Link",
-      "href": "#contact",
+      "href": "{{CONTACT_SECTION_LINK}}",
       "text": "Contact Me"
     },
     {
       "name": "Latest Project Section Link",
-      "href": "#portfolio",
+      "href": "{{PORTFOLIO_SECTION_LINK}}",
       "text": "My Projects"
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Showcase"
     }
   ],
