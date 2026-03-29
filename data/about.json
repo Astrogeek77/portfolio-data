@@ -55,5 +55,55 @@
     "Japanese/French/Spanish",
     "Power BI",
     "AI Tools"
-  ]  
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Programmer Analyst",
+      "company": "Cognizant",
+      "duration": "2024 - Present",
+      "description": "Successfully transitioned from the CSD training program to a full-time role by demonstrating proficiency in enterprise technologies and passing rigorous technical assessments.",
+      "highlights": [
+        "Completed Certified Skill Development (CSD) training with a focus on real-world practical projects.",
+        "Collaborated with professional trainers and passed routine technical assessments and interviews.",
+        "Applied theoretical knowledge to practical usage projects during the intensive training phase."
+      ],
+      "techStack": ["SQL", "PL/SQL", "Oracle Apps"]
+    },
+    {
+      "id": 2,
+      "role": "SDE Intern - Tech Lead",
+      "company": "TNP CELL, GNDEC",
+      "duration": "2022 - 2023",
+      "description": "Led the technical direction for the training and placement cell's web presence.",
+      "highlights": [
+        "Reduced website loading time by 66% through aggressive code refactoring and optimization.",
+        "Developed and maintained responsive web layouts for a seamless user experience.",
+        "Managed a team of junior students, facilitating weekly feature planning and task delegation."
+      ],
+      "techStack": ["React.js", "Node.js", "MongoDB", "Express.js"]
+    },
+    {
+      "id": 3,
+      "role": "Tech Lead & SDE Intern",
+      "company": "11mantras",
+      "duration": "2022",
+      "description": "Focused on building complex real-time communication tools and secure authentication systems.",
+      "highlights": [
+        "Architected a video conferencing and chat platform utilizing WebRTC and Socket.io.",
+        "Implemented a secure user authentication system using JWT (JSON Web Tokens).",
+        "Developed reusable and responsive UI components for the core product."
+      ],
+      "techStack": ["React.js", "Node.js", "WebRTC", "Socket.js"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelors in Computer Science",
+      "institution": "GNDEC, Ludhiana",
+      "duration": "2019 - 2023",
+      "description": "Focused on core Computer Science fundamentals including DSA, DBMS, and Operating Systems while maintaining active participation in competitive programming."
+    }
+  ]
 }
