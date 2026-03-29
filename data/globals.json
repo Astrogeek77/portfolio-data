@@ -18,9 +18,9 @@
   "CONTACT_SECTION_LINK": "#contact",
   "PRIMARY_MAIL_LINK": "mailto:igautamjain12345@gmail.com",
   "SECONDARY_MAIL_LINK": "mailto:astrogeek77@gmail.com",
-  "chennaiURL_LINK": "https://maps.google.com/maps/contrib/102645630979920593419",
-  "hyderabadURL_LINK": "https://maps.google.com/?cid=4035170500064624703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ1",
-  "delhiURL_LINK": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICh-LHPEQ!2e10!4m2!3m1!1s0x390cfd5b347eb62d:0x52c2b7494e204dce",
-  "ludhianaURL_LINK": "https://maps.google.com/maps/contrib/118424648726551188658",
-  "noidaURL_LINK": "https://maps.google.com/?cid=4035170500064624703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ4"
+  "chennaiURL_LINK": "https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  "hyderabadURL_LINK": "https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  "delhiURL_LINK": "https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  "ludhianaURL_LINK": "https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  "noidaURL_LINK": "https://maps.google.com/maps?q=Noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
 }
