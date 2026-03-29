@@ -17,12 +17,12 @@
   "portfolioSectionLinks": [
     {
       "name": "Project Showcase Page",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Project Showcase"
     },
     {
       "name": "Blog Showcase Page",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ]
