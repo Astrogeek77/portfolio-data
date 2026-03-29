@@ -46,7 +46,7 @@
     },
     {
       "name": "Linktree",
-      "href": "{{LINKTREE_LINK}}",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "All My Links"
     }
   ]
