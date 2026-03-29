@@ -1,18 +1,18 @@
 {
   "socialLinks": [
-    { "href": "https://github.com/astrogeek77", "icon": "fab fa-github", "name": "Github" },
-    { "href": "https://linkedin.com/in/astrogeek77", "icon": "fab fa-linkedin", "name": "Linkedin" },
+    { "href": "{{GITHUB_LINK}}", "icon": "fab fa-github", "name": "Github" },
+    { "href": "{{LINKEDIN_LINK}}", "icon": "fab fa-linkedin", "name": "Linkedin" },
     { "href": "https://instagram.com/astrogeek77", "icon": "fab fa-instagram", "name": "Instagram" },
     { "href": "https://twitter.com/GautamJ49902907", "icon": "fab fa-twitter", "name": "Twitter" },
-    { "href": "https://discordapp.com/users/578628281708969996", "icon": "fab fa-discord", "name": "Discord" },
+    { "href": "{{DISCORD_LINK}}", "icon": "fab fa-discord", "name": "Discord" },
     { "href": "https://www.facebook.com/profile.php?id=100011495626223", "icon": "fab fa-facebook", "name": "Facebook" },
     { "href": "https://t.me/astrogeek77", "icon": "fab fa-telegram-plane", "name": "Telegram" },
     { "href": "https://www.duolingo.com/profile/igautamjain", "icon": "fas fa-star", "name": "Duolingo" },
     { "href": "https://anilist.co/user/Astrogeek77/", "icon": "fas fa-star", "name": "Anilist" }
   ],
-  "CompetetiveLinks": [
-    { "href": "https://leetcode.com/LeetCodeMachiene/", "icon": "fas fa-star", "name": "Leetcode" },
-    { "href": "https://auth.geeksforgeeks.org/user/astrogeek77/", "icon": "fas fa-star", "name": "GeeksforGeeks" },
+  "CompetitiveLinks": [
+    { "href": "{{LEETCODE_LINK}}", "icon": "fas fa-star", "name": "Leetcode" },
+    { "href": "{{GFG_LINK}}", "icon": "fas fa-star", "name": "GeeksforGeeks" },
     { "href": "https://www.codingninjas.com/codestudio/profile/46e426b6-00f9-4e06-89b2-f0459df1b078", "icon": "fas fa-star", "name": "CodeStudio" },
     { "href": "https://codeforces.com/profile/Mr_Robot_77", "icon": "fas fa-star", "name": "CodeForces" },
     { "href": "https://www.codechef.com/users/astrogeek77", "icon": "fas fa-star", "name": "Codechef" },
@@ -23,14 +23,14 @@
     { "href": "https://www.reczee.com/talenthub/astrogeek77", "icon": "fas fa-star", "name": "Raczee" },
     { "href": "https://medium.com/@astrogeek77", "icon": "fas fa-star", "name": "Medium" },
     { "href": "https://dev.to/astrogeek77", "icon": "fab fa-dev", "name": "Dev.to" },
-    { "href": "https://codepen.io/astrogeek77/", "icon": "fab fa-codepen", "name": "Codepen" },
-    { "href": "https://igautamjain.hashnode.dev/", "icon": "fas fa-blog", "name": "My Blog" }
+    { "href": "{{CODEPEN_LINK}}", "icon": "fab fa-codepen", "name": "Codepen" },
+    { "href": "{{BLOG_LINK}}", "icon": "fas fa-blog", "name": "My Blog" }
   ],
   "websiteLinks": [
     { "name": "Vanilla Portfolio", "href": "https://megautamjain.netlify.app", "icon": "fas fa-laptop-code" },
     { "name": "My Old Portfolio", "href": "https://astrogeek77.github.io/portfolio/", "icon": "fas fa-laptop-code" },
-    { "name": "Project Showcase", "href": "./projects", "icon": "fas fa-laptop-code" },
-    { "name": "Blog Showcase", "href": "./blogs", "icon": "fas fa-laptop-code" }
+    { "name": "{{PROJECTS_SHOWCASE_PAGE_LINK}}", "href": "./projects", "icon": "fas fa-laptop-code" },
+    { "name": "{{BLOG_SHOWCASE_PAGE_LINK}}", "href": "./blogs", "icon": "fas fa-laptop-code" }
   ],
   "githubLinks": [
     { "name": "Custom React hooks Library", "href": "https://github.com/Astrogeek77/custom-react-hooks", "icon": "fas fa-code" },
@@ -42,8 +42,8 @@
     { "name": "Leetcode-GFG Solutions", "href": "https://github.com/Astrogeek77/Leetcode_GFG_solutions", "icon": "fas fa-code" }
   ],
   "otherLinks": [
-    { "name": "Mail Me", "href": "mailto:igautamjain12345@gmail.com", "icon": "fas fa-envelope" },
-    { "name": "Secondary Mail", "href": "mailto:astrogeek77@gmail.com", "icon": "fas fa-envelope" },
+    { "name": "Mail Me", "href": "{{PRIMARY_MAIL_LINK}}", "icon": "fas fa-envelope" },
+    { "name": "Secondary Mail", "href": "{{SECONDARY_MAIL_LINK}}", "icon": "fas fa-envelope" },
     { "name": "My Resume", "href": "https://drive.google.com/file/d/18HQYqaSq4os__qFDoJ5DiHSHUuNQUKh1/view", "icon": "fas fa-file" }
   ]
 }
