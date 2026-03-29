@@ -7,22 +7,22 @@
     },
     {
       "name": "Project Showcase Page Link",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Projects Showcase"
     },
     {
       "name": "Web Linktree Page Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Showcase"
     },
     {
       "name": "Blog Showcase Page Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ],
@@ -34,22 +34,22 @@
     },
     {
       "name": "Home Page Link",
-      "href": "./",
+      "href": "{{HOME_PAGE_LINK}}",
       "text": "Home Page"
     },
     {
       "name": "Web Linktree Page Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Showcase"
     },
     {
       "name": "Blog Showcase Page Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ],
@@ -61,22 +61,22 @@
     },
     {
       "name": "Home Page Link",
-      "href": "./",
+      "href": "{{HOME_PAGE_LINK}}",
       "text": "Home Page"
     },
     {
       "name": "Project Showcase Page Link",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Projects Showcase"
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Showcase"
     },
     {
       "name": "Blog Showcase Page Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ],
@@ -88,22 +88,22 @@
     },
     {
       "name": "Home Page Link",
-      "href": "./",
+      "href": "{{HOME_PAGE_LINK}}",
       "text": "Home Page"
     },
     {
       "name": "Project Showcase Page Link",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Projects Showcase"
     },
     {
       "name": "Web Linktree Page Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
       "name": "Blog Showcase Page Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ],
@@ -115,22 +115,22 @@
     },
     {
       "name": "Home Page Link",
-      "href": "./",
+      "href": "{{HOME_PAGE_LINK}}",
       "text": "Home Page"
     },
     {
       "name": "Project Showcase Page Link",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Projects Showcase"
     },
     {
       "name": "Web Linktree Page Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Showcase"
     }
   ]
