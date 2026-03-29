@@ -18,9 +18,9 @@
   "CONTACT_SECTION_LINK": "#contact",
   "PRIMARY_MAIL_LINK": "mailto:igautamjain12345@gmail.com",
   "SECONDARY_MAIL_LINK": "mailto:astrogeek77@gmail.com",
-  "chennaiURL_LINK": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387386.09548857965!2d79.8793291004455!3d13.04731684497007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1736167214733!5m2!1sen!2sin",
-  "hyderabadURL_LINK": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487295.2259031415!2d78.07836498642885!3d17.412077873639856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1731151975251!5m2!1sen!2sin",
-  "delhiURL_LINK": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.32835516133!2d77.20898509999999!3d28.5273522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1774791512008!5m2!1sen!2sin",
-  "ludhianaURL_LINK": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109552.36514740642!2d75.78663301452013!3d30.900326335691954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1675673311646!5m2!1sen!2sin",
-  "noidaURL_LINK": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112178.64480204455!2d77.40182545!3d28.5222018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1774791603503!5m2!1sen!2sin"
+  "chennaiURL_LINK": "https://maps.google.com/maps/contrib/102645630979920593419",
+  "hyderabadURL_LINK": "https://maps.google.com/?cid=4035170500064624703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ1",
+  "delhiURL_LINK": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgICh-LHPEQ!2e10!4m2!3m1!1s0x390cfd5b347eb62d:0x52c2b7494e204dce",
+  "ludhianaURL_LINK": "https://maps.google.com/maps/contrib/118424648726551188658",
+  "noidaURL_LINK": "https://maps.google.com/?cid=4035170500064624703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ4"
 }
