@@ -2,64 +2,64 @@
   "footerLinks1": [
     {
       "name": "Leetcode Profile",
-      "href": "https://leetcode.com/LeetCodeMachiene/",
+      "href": "{{LEETCODE_LINK}}",
       "text": "Leetcode"
     },
     {
       "name": "GFG profile",
-      "href": "https://auth.geeksforgeeks.org/user/astrogeek77/",
+      "href": "{{GFG_LINK}}",
       "text": "GFG"
     },
     {
       "name": "hashnode blog",
-      "href": "https://igautamjain.hashnode.dev/",
+      "href": "{{BLOG_LINK}}",
       "text": "My Blog"
     },
     {
-      "name": "Linkedin Profile",
-      "href": "https://linkedin.com/in/astrogeek77",
-      "text": "Linkedin"
+      "name": "LinkedIn Profile",
+      "href": "{{LINKEDIN_LINK}}",
+      "text": "LinkedIn"
     },
     {
       "name": "Discord Link",
-      "href": "https://discordapp.com/users/578628281708969996",
+      "href": "{{DISCORD_LINK}}",
       "text": "Discord"
     },
     {
       "name": "Github Link",
-      "href": "https://github.com/astrogeek77",
+      "href": "{{GITHUB_LINK}}",
       "text": "Github"
     },
     {
       "name": "Buy Me a Hot Coffee",
-      "href": "https://buymeacoffee.com/astrogeek77",
+      "href": "{{BUY_COFFEE_LINK}}",
       "text": "Buy Me a Coffee"
     }
   ],
   "footerLinks2": [
     {
       "name": "Home Footer Page Link",
-      "href": "./",
+      "href": "{{HOME_PAGE_LINK}}",
       "text": "Home"
     },
     {
       "name": "Resume Showcase Page Footer Link",
-      "href": "./resume",
+      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
       "text": "Resume Page"
     },
     {
       "name": "Project Showcase Page Footer Link",
-      "href": "./projects",
+      "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}",
       "text": "Projects Page"
     },
     {
       "name": "Linktree Page Footer Link",
-      "href": "./linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Linktree Page"
     },
     {
       "name": "blog Showcase Page Footer Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blogs Page"
     }
   ]
