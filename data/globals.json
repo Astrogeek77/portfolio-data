@@ -17,5 +17,10 @@
   "PORTFOLIO_SECTION_LINK": "#portfolio",
   "CONTACT_SECTION_LINK": "#contact",
   "PRIMARY_MAIL_LINK": "mailto:igautamjain12345@gmail.com",
-  "SECONDARY_MAIL_LINK": "mailto:astrogeek77@gmail.com"
+  "SECONDARY_MAIL_LINK": "mailto:astrogeek77@gmail.com",
+  "chennaiURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387386.09548857965!2d79.8793291004455!3d13.04731684497007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1736167214733!5m2!1sen!2sin",
+  "hyderabadURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487295.2259031415!2d78.07836498642885!3d17.412077873639856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1731151975251!5m2!1sen!2sin",
+  "delhiURL": "https://maps.google.com/?cid=5963530382063193550&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ",
+  "ludhianaURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109552.36514740642!2d75.78663301452013!3d30.900326335691954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1675673311646!5m2!1sen!2sin",
+  "noidaURL": "https://maps.google.com/?cid=4035170500064624703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
 }
