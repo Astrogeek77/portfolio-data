@@ -1,10 +1,10 @@
 {
   "ResumeLink": "{{RESUME_LINK}}",
   "resumeShowcaseLinks": [
-    { "name": "Github-link", "href": "https://github.com/astrogeek77", "text": "My Github" },
-    { "name": "hashnode blog", "href": "https://igautamjain.hashnode.dev/", "text": "My Blog" },
-    { "name": "linkedin-link", "href": "https://linkedin.com/in/astrogeek77", "text": "Linkedin" },
-    { "name": "Codepen profile", "href": "https://codepen.io/astrogeek77/", "text": "Codepen" }
+    { "name": "Github-link", "href": "{{GITHUB_LINK}}", "text": "My Github" },
+    { "name": "hashnode blog", "href": "{{BLOG_LINK}}", "text": "My Blog" },
+    { "name": "linkedin-link", "href": "{{LINKEDIN_LINK}}", "text": "Linkedin" },
+    { "name": "Codepen profile", "href": "{{CODEPEN_LINK}}", "text": "Codepen" }
   ],
   "primaryMails": ["igautamjain12345@gmail.com", "astrogeek77@gmail.com"],
   "secondaryMails": ["astrogeek77@outlook.com", "icodergautam@gmail.com", "tachyonvigilante349@gmail.com"]
