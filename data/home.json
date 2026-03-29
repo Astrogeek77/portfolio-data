@@ -10,7 +10,7 @@
   "homeSectionLinks": [
     {
       "name": "Web Linktree Page Link",
-      "href": "{{LINKTREE_PAGE_LINK}}",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
       "text": "Web Linktree"
     },
     {
