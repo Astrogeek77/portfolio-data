@@ -10,17 +10,17 @@
   "blogSectionLinks": [
     {
       "name": "github-link",
-      "href": "https://github.com/astrogeek77",
+      "href": "{{GITHUB_LINK}}",
       "text": "My Github"
     },
     {
       "name": "Codepen profile",
-      "href": "https://codepen.io/astrogeek77/",
+      "href": "{{CODEPEN_LINK}}",
       "text": "Codepen"
     },
     {
       "name": "Blog Showcase Page Link",
-      "href": "./blogs",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
       "text": "Blog Showcase"
     }
   ]
