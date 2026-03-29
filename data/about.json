@@ -16,11 +16,44 @@
       "text": "Blog"
     }
   ],
-  "codingSkills": [
+   "codingSkills": [
     { "name": "Javascript", "percentage": 85 },
     { "name": "Java", "percentage": 85 },
     { "name": "SQL-PL/SQL", "percentage": 80 },
+    { "name": "Dart", "percentage": 60 },
+    { "name": "Python", "percentage": 65 },
     { "name": "Spring Boot", "percentage": 75 }
   ],
-  "aboutParagraph": "<p>Hi, my name is Gautam Jain. I am a Tech and Space Enthusiast. I am a CSE Major, and currently, I am working as a PA in Cognizant.<br /><br />I have been fascinated by the wondrous aspects of technology ever since I was a kid...</p><p style='text-transform: none;'>I graduated with my bachelor's degree from <b>GNDEC, Ludhiana</b> in August 2023. Throughout my course, I invested in core concepts like <b>Data Structures and Algorithms, Database management, and Cyber Security</b>.<br /><br />Currently working as a <b>Programmer Analyst at Cognizant</b>, brushing up on <b>Oracle SQL, PL/SQL, and Spring Boot</b>.</p>"
+
+  "professionalSkills": [
+    { "name": "Web Development", "percentage": 85 },
+    { "name": "Mobile Development", "percentage": 55 },
+    { "name": "Core Skills", "percentage": 80 },
+    { "name": "Databases", "percentage": 70 },
+    { "name": "Japanese", "percentage": 30 },
+    { "name": "French/Spanish", "percentage": 30 }
+  ],
+
+  "techStack": [
+    "C / C++",
+    "CSS/SCSS/SASS",
+    "JavaScript",
+    "NodeJS",
+    "ReactJS / VueJS",
+    "NextJS",
+    "Python",
+    "Flask",
+    "Java",
+    "Spring",
+    "Docker / Kubernetes",
+    "Kafka / Redis",
+    "Autosys / Shell Scripting",
+    "Flutter/ Dart",
+    "Oracle SQL / PL-SQL",
+    "Git/Github",
+    "Oracle APPS",
+    "Japanese/French/Spanish",
+    "Power BI",
+    "AI Tools"
+  ]  
 }
