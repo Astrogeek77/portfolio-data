@@ -29,8 +29,8 @@
   "websiteLinks": [
     { "name": "Vanilla Portfolio", "href": "https://megautamjain.netlify.app", "icon": "fas fa-laptop-code" },
     { "name": "My Old Portfolio", "href": "https://astrogeek77.github.io/portfolio/", "icon": "fas fa-laptop-code" },
-    { "name": "{{PROJECTS_SHOWCASE_PAGE_LINK}}", "href": "./projects", "icon": "fas fa-laptop-code" },
-    { "name": "{{BLOG_SHOWCASE_PAGE_LINK}}", "href": "./blogs", "icon": "fas fa-laptop-code" }
+    { "name": "Projects Showcase", "href": "{{PROJECTS_SHOWCASE_PAGE_LINK}}", "icon": "fas fa-laptop-code" },
+    { "name": "Blogs Showcase", "href": "{{BLOG_SHOWCASE_PAGE_LINK}}", "icon": "fas fa-laptop-code" }
   ],
   "githubLinks": [
     { "name": "Custom React hooks Library", "href": "https://github.com/Astrogeek77/custom-react-hooks", "icon": "fas fa-code" },
