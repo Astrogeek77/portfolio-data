@@ -10,7 +10,7 @@
     { "href": "https://www.duolingo.com/profile/igautamjain", "icon": "fas fa-star", "name": "Duolingo" },
     { "href": "https://anilist.co/user/Astrogeek77/", "icon": "fas fa-star", "name": "Anilist" }
   ],
-  "CompetitiveLinks": [
+  "CompetetiveLinks": [
     { "href": "{{LEETCODE_LINK}}", "icon": "fas fa-star", "name": "Leetcode" },
     { "href": "{{GFG_LINK}}", "icon": "fas fa-star", "name": "GeeksforGeeks" },
     { "href": "https://www.codingninjas.com/codestudio/profile/46e426b6-00f9-4e06-89b2-f0459df1b078", "icon": "fas fa-star", "name": "CodeStudio" },
