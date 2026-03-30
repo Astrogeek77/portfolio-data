@@ -3,58 +3,55 @@
   "paragraphEndLine": "I am always open to discussing emerging technologies, brainstorming innovative project ideas, and exploring new opportunities with product-driven companies. Feel free to connect with me on LinkedIn or check out my GitHub to see what I'm up to!",
   "aboutSectionLinks": [
     {
+      "name": "LinkedIn Link",
+      "href": "{{LINKEDIN_LINK}}",
+      "text": "My LinkedIn"
+    },
+    {
       "name": "Github Link",
       "href": "{{GITHUB_LINK}}",
       "text": "Github"
     },
     {
-      "name": "Codepen Link",
-      "href": "{{CODEPEN_LINK}}",
-      "text": "Codepen"
-    },
-    {
-      "name": "Blog Link",
-      "href": "{{BLOG_LINK}}",
-      "text": "Blog"
+      "name": "My Linktree",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
+      "text": "My Linktree"
     }
   ],
-   "codingSkills": [
+  "codingSkills": [
     { "name": "Javascript", "percentage": 85 },
-    { "name": "Java", "percentage": 85 },
-    { "name": "SQL-PL/SQL", "percentage": 80 },
-    { "name": "Dart", "percentage": 60 },
+    { "name": "SQL-PL/SQL", "percentage": 85 },
+    { "name": "Java", "percentage": 75 },
+    { "name": "Spring Boot", "percentage": 70 },
     { "name": "Python", "percentage": 65 },
-    { "name": "Spring Boot", "percentage": 75 }
+    { "name": "Dart", "percentage": 60 }
   ],
-
   "professionalSkills": [
     { "name": "Web Development", "percentage": 85 },
+    { "name": "Core CS Skills", "percentage": 70 },
+    { "name": "Database Management", "percentage": 70 },
     { "name": "Mobile Development", "percentage": 55 },
-    { "name": "Core Skills", "percentage": 80 },
-    { "name": "Databases", "percentage": 70 },
-    { "name": "Japanese", "percentage": 30 },
+    { "name": "Japanese", "percentage": 35 },
     { "name": "French/Spanish", "percentage": 30 }
   ],
-
   "techStack": [
     "C / C++",
-    "CSS/SCSS/SASS",
+    "CSS/SCSS",
     "JavaScript",
     "NodeJS",
     "ReactJS / VueJS",
-    "NextJS",
     "Python",
     "Flask",
     "Java",
-    "Spring",
+    "Spring Boot",
     "Docker / Kubernetes",
     "Kafka / Redis",
     "Autosys / Shell Scripting",
-    "Flutter/ Dart",
+    "Flutter / Dart",
     "Oracle SQL / PL-SQL",
-    "Git/Github",
+    "Git / Github",
     "Oracle APPS",
-    "Japanese/French/Spanish",
+    "Japanese / French / Spanish",
     "Power BI",
     "AI Tools"
   ],
@@ -64,39 +61,42 @@
       "role": "Programmer Analyst",
       "company": "Cognizant",
       "duration": "2024 - Present",
-      "description": "Successfully transitioned from the CSD training program to a full-time role by demonstrating proficiency in enterprise technologies and passing rigorous technical assessments.",
+      "description": "Specializing in the development and automation of enterprise-grade applications within the Oracle EBS ecosystem. I leverage PL/SQL, Java, and Autosys to architect scalable solutions for complex business workflows.",
       "highlights": [
-        "Completed Certified Skill Development (CSD) training with a focus on real-world practical projects.",
-        "Collaborated with professional trainers and passed routine technical assessments and interviews.",
-        "Applied theoretical knowledge to practical usage projects during the intensive training phase."
+        "Engineered and deployed full-stack enterprise solutions, focusing on modularity and high-availability during accelerated technical delivery cycles.",
+        "Streamlined business processes by developing robust backend services and RESTful APIs utilizing Java and Spring Boot.",
+        "Optimized mission-critical database workflows and PL/SQL procedures, significantly improving data processing efficiency and system reliability.",
+        "Collaborated in an Agile environment to troubleshoot complex production issues and automate scheduled tasks using Autosys, reducing manual intervention."
       ],
-      "techStack": ["SQL", "PL/SQL", "Oracle Apps", "Java", "Spring Boot"]
+      "techStack": ["Oracle EBS", "PL/SQL", "Java", "Spring Boot", "Autosys", "Oracle SQL", "REST APIs"]
     },
     {
       "id": 2,
-      "role": "SDE Intern - Tech Lead",
+      "role": "Full Stack Developer & Tech Lead (Intern)",
       "company": "TNP CELL, GNDEC",
-      "duration": "2022 - 2023",
-      "description": "Led the technical direction for the training and placement cell's web presence.",
+      "duration": "2021 - 2023",
+      "description": "Architected and spearheaded the technical transition of the Training & Placement Cell’s web infrastructure to a scalable microservices-based model.",
       "highlights": [
-        "Reduced website loading time by 66% through aggressive code refactoring and optimization.",
-        "Developed and maintained responsive web layouts for a seamless user experience.",
-        "Managed a team of junior students, facilitating weekly feature planning and task delegation."
+        "Optimized platform performance, achieving a 66% reduction in page load time through aggressive code refactoring and asset optimization.",
+        "Engineered a modular Microservices architecture using Docker to ensure high availability and seamless deployment of placement features.",
+        "Directed a cross-functional team of student developers, implementing Agile practices for weekly sprint planning and task delegation.",
+        "Designed and deployed responsive, mobile-first web layouts, improving accessibility for 2,000+ student users."
       ],
-      "techStack": ["React.js", "Node.js", "MongoDB", "Express.js", "Docker", "Microservices"]
+      "techStack": ["React.js", "Node.js", "MongoDB", "Express.js", "Docker", "Microservices", "Agile"]
     },
     {
       "id": 3,
-      "role": "Tech Lead & SDE Intern",
+      "role": "Lead Software Engineering Intern",
       "company": "11mantras",
       "duration": "2022",
-      "description": "Focused on building complex real-time communication tools and secure authentication systems.",
+      "description": "Spearheaded the development of a high-performance, real-time communication suite, focusing on low-latency data streaming and enterprise-grade security.",
       "highlights": [
-        "Architected a video conferencing and chat platform utilizing WebRTC and Socket.io.",
-        "Implemented a secure user authentication system using JWT (JSON Web Tokens).",
-        "Developed reusable and responsive UI components for the core product."
+        "Architected a scalable video conferencing and instant messaging platform using WebRTC for P2P media streaming and Socket.io for real-time signaling.",
+        "Engineered a robust, stateless authentication framework using JWT (JSON Web Tokens), enhancing platform security and user session management.",
+        "Developed a centralized library of responsive UI components, reducing frontend development time for subsequent feature releases by 30%.",
+        "Optimized data transmission protocols to ensure seamless communication across low-bandwidth network environments."
       ],
-      "techStack": ["React.js", "Node.js", "WebRTC", "Socket.js"]
+      "techStack": ["React.js", "Node.js", "WebRTC", "Socket.io", "JWT", "Tailwind CSS"]
     }
   ],
   "education": [
