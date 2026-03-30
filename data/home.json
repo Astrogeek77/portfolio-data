@@ -3,20 +3,20 @@
     "PA at Cognizant",
     "Software Engineer",
     "MERN / Java Developer",
-    "Looking for product-based roles",
+    "Looking for Product-based roles",
     "Astronomy Lover",
     "Tech Enthusiast"
   ],
   "homeSectionLinks": [
     {
-      "name": "Web Linktree Page Link",
-      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
-      "text": "Web Linktree"
-    },
-    {
       "name": "Contact Section Link",
       "href": "{{CONTACT_SECTION_LINK}}",
       "text": "Contact Me"
+    },
+    {
+      "name": "Web Linktree Page Link",
+      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
+      "text": "My Linktree"
     },
     {
       "name": "Latest Project Section Link",
@@ -26,8 +26,8 @@
     {
       "name": "Resume Showcase Page Link",
       "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
-      "text": "Resume Showcase"
+      "text": "My Resume"
     }
   ],
-  "homeparagraph": "<b>Programmer Analyst</b> at <strong>Cognizant</strong>, <b style=\"text-transform: none;\"> B.Tech in CSE</b>. I am currently working with technologies <strong> like Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, Spring Boot, Kafka, Docker </strong> etc. I am always open to opportunities to further polish my skills and participate in <strong style=\"text-transform: none;\"> technology, project ideas, and business discussions.</strong>"
+  "homeparagraph": "<b>Programmer Analyst</b> at <strong>Cognizant</strong>, <b style=\"text-transform: none;\"> B.Tech in CSE</b>. I am currently working with technologies <strong> like Oracle Apps, Oracle SQL, Oracle PL/SQL, Java, Spring Boot, Kafka, Docker </strong> etc. I am looking for opportunities to further polish my skills and participate in <strong style=\"text-transform: none;\"> tech podcasts, project ideas, and business discussions.</strong>"
 }
