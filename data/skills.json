@@ -42,12 +42,12 @@
       "name": "Certifications",
       "iconClass": "fas fa-link",
       "href": "{{CERTIFICATION_LINK}}",
-      "text": "View My Certifications."
+      "text": "View My Certifications"
     },
     {
-      "name": "Linktree",
-      "href": "{{LINKTREE_SHOWCASE_PAGE_LINK}}",
-      "text": "All My Links"
+      "name": "Blog Showcase Page",
+      "href": "{{BLOG_SHOWCASE_PAGE_LINK}}",
+      "text": "My Blogs"
     }
   ]
 }
