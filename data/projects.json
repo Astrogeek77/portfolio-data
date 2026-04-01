@@ -254,12 +254,12 @@
   },
   {
     "id": "webProjects2023",
-    "class": "box live fun challenges original css",
+    "class": "box fun challenges original css",
     "src": "/images/live/wd-23.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/live/wd-23.webp",
     "href": "https://github.com/Astrogeek77/Web_Dev_2023",
     "name": "Web Mini Projects 2023",
-    "tags": ["live", "fun", "challenges", "original", "css", "mini projects"],
+    "tags": ["fun", "challenges", "original", "css", "mini projects"],
     "date": "29-12-2023",
     "rating": 8.4
   },
@@ -358,20 +358,9 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Java_web_dev_projects/",
     "name": "Java Practice Projects",
-    "tags": ["java", "live", "learning"],
+    "tags": ["java", "live", "learning", "development"],
     "date": "13-08-2023",
     "rating": 8.24
-  },
-  {
-    "id": "MatrimonialCMSProject",
-    "class": "box mern live team",
-    "src": "/images/code/leetcode-gfg-solutions.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
-    "href": "https://github.com/orgs/Aggarwal-Pavitra-Bandhan/repositories",
-    "name": "Matrimonial CMS Webapp",
-    "tags": ["mern", "live", "team", "nodejs", "javascript", "js", "react", "reactjs"],
-    "date": "26-10-2023",
-    "rating": 8.5
   },
   {
     "id": "flutterPracticeProjects",
@@ -485,12 +474,12 @@
   },
   {
     "id": "MyGithubReadme",
-    "class": "box markdown",
+    "class": "box markdown live",
     "src": "/images/apps/video-chat-app.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Astrogeek77",
     "name": "Github Readme",
-    "tags": ["markdown", "github", ".md", "profile", "readme"],
+    "tags": ["markdown", "github", "live", ".md", "profile", "readme"],
     "date": "15-05-2024",
     "rating": 8.1
   },
@@ -505,7 +494,29 @@
     "date": "26-04-2024",
     "rating": 8.4
   },
-  {
+   {
+    "id": "SpringBootCodebase",
+    "class": "box live java spring springboot design patterns",
+    "src": "/images/apps/video-chat-app.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Spring_boot_Codebase",
+    "name": "Spring Boot Codebase",
+    "tags": ["box", "java", "live", "spring", "spring boot", "core java", "development", "design patterns"],
+    "date": "15-02-2026",
+    "rating": 9.0
+  },
+   {
+    "id": "SvelteFeedbackApp",
+    "class": "box java spring springboot projects",
+    "src": "/images/apps/video-chat-app.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Svelte_feedback_app",
+    "name": "Svelte Feedback App",
+    "tags": ["box", "svelte", "development"],
+    "date": "15-3-2025",
+    "rating": 8.2
+  },
+    {
     "id": "OracleTechnoFunctionalCourse",
     "class": "box oracle ebs eps training cognizant",
     "src": "/images/apps/video-chat-app.webp",
@@ -516,15 +527,15 @@
     "date": "13-07-2024",
     "rating": 8.3
   },
-   {
-    "id": "SpringBootCodebase",
-    "class": "box java spring springboot design patterns",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Spring_boot_Codebase",
-    "name": "Spring Boot Codebase",
-    "tags": ["box", "java", "spring", "spring boot", "core java", "development", "design patterns"],
-    "date": "15-02-2026",
-    "rating": 9.0
-  }
+  {
+    "id": "MatrimonialCMSProject",
+    "class": "box mern team",
+    "src": "/images/code/leetcode-gfg-solutions.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
+    "href": "https://github.com/orgs/Aggarwal-Pavitra-Bandhan/repositories",
+    "name": "Matrimonial CMS Webapp",
+    "tags": ["mern", "team", "nodejs", "javascript", "js", "react", "reactjs"],
+    "date": "26-10-2023",
+    "rating": 8.5
+  },
 ]
