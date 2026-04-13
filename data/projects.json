@@ -314,7 +314,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/flask-test-website",
     "name": "Flask Practice webapp",
-    "tags": ["python", "mysql", "planetscale"],
+    "tags": ["python", "mysql", "planetscale", "flask"],
     "date": "04-03-2023",
     "rating": 8.0
   },
@@ -413,7 +413,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Glassmorphism",
     "name": "Glassmorphism",
-    "tags": ["solo", "css", "design"],
+    "tags": ["solo", "css", "glassmorphism"],
     "date": "20-06-2021",
     "rating": 7.85
   },
@@ -441,7 +441,7 @@
   },
   {
     "id": "springBootQuizBackend",
-    "class": "box solo spring java",
+    "class": "box solo spring java system",
     "src": "/images/apps/video-chat-app.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/QuizAppBackendSpringBoot",
@@ -452,12 +452,12 @@
   },
   {
     "id": "springBootAuthCRUD",
-    "class": "box solo spring java",
+    "class": "box solo spring java system",
     "src": "/images/apps/video-chat-app.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/SpringBootAuth",
     "name": "Spring Boot Auth App",
-    "tags": ["solo", "java", "spring", "spring-boot", "mysql", "spring-security", "jpa"],
+    "tags": ["solo", "java", "spring", "spring-boot", "mysql", "spring-security", "jpa", "system"],
     "date": "23-12-2023",
     "rating": 8.6
   },
@@ -512,7 +512,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Svelte_feedback_app",
     "name": "Svelte Feedback App",
-    "tags": ["box", "svelte", "development"],
+    "tags": ["box", "svelte", "development", "solo"],
     "date": "15-3-2025",
     "rating": 8.2
   },
@@ -540,12 +540,12 @@
   },
    {
     "id": "PulseRelayProject",
-    "class": "box java spring boot design patterns live original",
+    "class": "box java spring boot system design patterns live original",
     "src": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
     "href": "https://github.com/Astrogeek77/pulserelay",
     "name": "Pulse Relay Project",
-    "tags": ["java", "spring", "boot", "design", "patterns", "live", "original"],
+    "tags": ["java", "spring", "boot", "system", "design", "patterns", "live", "original", "solo"],
     "date": "02-04-2026",
     "rating": 9.4
   }
