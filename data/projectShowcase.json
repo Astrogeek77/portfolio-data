@@ -1,21 +1,26 @@
 {
   "portfolioShowcaseButtons": [
-    { "filter": "mern", "name": "MERN" },
-    { "filter": "cpp", "name": "C++" },
+    { "filter": "mern", "name": "MERN" }, 
+    { "filter": "react", "name": "ReactJs" },
     { "filter": "python", "name": "Python" },
+    { "filter": "flask", "name": "Flask" },
     { "filter": "java", "name": "Java" },
+    { "filter": "spring", "name": "Spring Boot" },
+    { "filter": "design", "name": "System design" },
+    { "filter": "code", "name": "DSALGO / CP" },
+    { "filter": "original", "name": "Originals" },
     { "filter": "css", "name": "CSS" },
     { "filter": "live", "name": "Live" },
-    { "filter": "flutter", "name": "Flutter" },
     { "filter": "solo", "name": "Solo" },
-    { "filter": "code", "name": "DSALGO / CP" },
-    { "filter": "react", "name": "ReactJs" },
+    { "filter": "mysql", "name": "SQL" }
+  ],
+  "unusedFilters": [
     { "filter": "fun", "name": "Fun" },
-    { "filter": "mongodb", "name": "MongoDB" },
-    { "filter": "mysql", "name": "SQL" },
-    { "filter": "original", "name": "Originals" },
+    { "filter": "mongodb", "name": "MongoDB" },   
+    { "filter": "oracle", "name": "Oracle" },
+    { "filter": "cpp", "name": "C++" },
     { "filter": "team", "name": "Teamwork" },
-    { "filter": "oracle", "name": "Oracle" }
+    { "filter": "flutter", "name": "Flutter" }
   ],
   "portfolioShowcaseLinks": [
     {
