@@ -2,17 +2,17 @@
   "portfolioSectionButtons": [
     { "filter": "all", "name": "All" },
     { "filter": "mern", "name": "MERN Projects" },
-    { "filter": "css", "name": "CSS" },
+    { "filter": "ds", "name": "DSA" },
     { "filter": "java", "name": "Java Projects" },
     { "filter": "live", "name": "Ongoing" }
   ],
  "featuredProjectIds": [
+    "PulseRelayProject",
     "bookHubProject",
     "SpringBootCodebase",
     "hospitalManagmentSystemProject",
     "ecommerceAppReduxToolkit",
-    "tnpgndecProject",
-     "DSALGOCodebase"
+    "DSALGOCodebase"
   ],
   "portfolioSectionLinks": [
     {
