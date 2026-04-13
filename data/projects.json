@@ -265,12 +265,12 @@
   },
   {
     "id": "cssbattleCodebase",
-    "class": "box live challenges css",
+    "class": "box challenges css",
     "src": "/images/apps/video-chat-app.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/CSS_Battles_Codebase",
     "name": "CSS Battle Competitive Codebase",
-    "tags": ["live", "challenges", "css", "compete", "original"],
+    "tags": ["challenges", "css", "compete", "original"],
     "date": "15-07-2023",
     "rating": 8.2
   },
