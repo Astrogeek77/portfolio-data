@@ -1,0 +1,31 @@
+name: Validate JSON Files
+
+on:
+  push:
+    paths:
+      - '**.json' # Only run when JSON files are modified
+  pull_request:
+    paths:
+      - '**.json'
+
+jobs:
+  check-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check JSON Syntax
+        run: |
+          # Find all JSON files and validate them using jq (pre-installed on GitHub runners)
+          find . -type f -name "*.json" -print0 | while IFS= read -r file; do
+            echo "Checking $file..."
+            if ! jq empty "$file" > /dev/null 2>&1; then
+              echo "❌ ERROR: Invalid JSON found in $file"
+              # Run python json tool just to print the exact line number of the error
+              python3 -m json.tool "$file" > /dev/null
+              exit 1
+            else
+              echo "✅ $file is valid."
+            fi
+          done
