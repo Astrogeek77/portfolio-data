@@ -537,5 +537,16 @@
     "tags": ["mern", "team", "nodejs", "javascript", "js", "react", "reactjs"],
     "date": "26-10-2023",
     "rating": 8.5
+  },
+   {
+    "id": "PulseRelayProject",
+    "class": "box java spring boot design patterns live original",
+    "src": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
+    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
+    "href": "https://github.com/Astrogeek77/pulserelay",
+    "name": "Pulse Relay Project",
+    "tags": ["java", "spring", "boot", "design", "patterns", "live", "original"],
+    "date": "02-04-2026",
+    "rating": 9.4
   }
 ]
