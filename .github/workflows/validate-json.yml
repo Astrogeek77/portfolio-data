@@ -3,29 +3,79 @@ name: Validate JSON Files
 on:
   push:
     paths:
-      - '**.json' # Only run when JSON files are modified
+      - '**.json'
   pull_request:
     paths:
       - '**.json'
 
 jobs:
-  check-json:
+  bulletproof-json-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Check JSON Syntax
+      - name: Create Duplicate-Key Checker Script
         run: |
-          # Find all JSON files and validate them using jq (pre-installed on GitHub runners)
-          find . -type f -name "*.json" -print0 | while IFS= read -r file; do
-            echo "Checking $file..."
-            if ! jq empty "$file" > /dev/null 2>&1; then
-              echo "❌ ERROR: Invalid JSON found in $file"
-              # Run python json tool just to print the exact line number of the error
-              python3 -m json.tool "$file" > /dev/null
-              exit 1
-            else
-              echo "✅ $file is valid."
+          cat << 'EOF' > check_duplicates.py
+          import json, sys
+          def dict_raise_on_duplicates(ordered_pairs):
+              d = {}
+              for k, v in ordered_pairs:
+                  if k in d:
+                      raise ValueError(f"Duplicate key found: '{k}'")
+                  d[k] = v
+              return d
+          try:
+              with open(sys.argv[1], 'r', encoding='utf-8') as f:
+                  json.load(f, object_pairs_hook=dict_raise_on_duplicates)
+          except Exception as e:
+              print(f"ERROR: {e}")
+              sys.exit(1)
+          EOF
+
+      - name: Run Multi-Layer Validation
+        run: |
+          echo "Starting Bulletproof JSON validation..."
+          FAIL=0
+          
+          while IFS= read -r -d '' file; do
+            echo "----------------------------------------"
+            echo "🔍 Checking: $file"
+            
+            # LAYER 1: Check if file is completely empty (0 bytes)
+            if [ ! -s "$file" ]; then
+              echo "❌ ERROR: File is completely empty!"
+              FAIL=1
+              continue
             fi
-          done
+
+            # LAYER 2: Strict Syntax & Unescaped Character Check (jq)
+            # This catches trailing commas, single quotes, unclosed brackets, and raw tabs/newlines
+            if ! jq empty "$file" > /dev/null 2>&1; then
+              echo "❌ SYNTAX ERROR: Invalid JSON format!"
+              # Print the exact line number of the syntax error
+              python3 -m json.tool "$file" > /dev/null || true
+              FAIL=1
+              continue
+            fi
+
+            # LAYER 3: Duplicate Key Check (Python custom script)
+            # This catches silent overwrites where you accidentally used the same key twice
+            if ! python3 check_duplicates.py "$file"; then
+              echo "❌ DATA ERROR: Duplicate keys detected!"
+              FAIL=1
+              continue
+            fi
+            
+            echo "✅ Passed all checks."
+            
+          done < <(find . -type f -name "*.json" -print0)
+
+          echo "----------------------------------------"
+          if [ $FAIL -eq 1 ]; then
+            echo "🚨 VALIDATION FAILED! Please fix the errors listed above."
+            exit 1
+          fi
+          
+          echo "🎉 SUCCESS: All JSON files are structurally perfect and safe for production!"
