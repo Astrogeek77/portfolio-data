@@ -25,7 +25,7 @@
     },
     {
       "name": "Resume Showcase Page Link",
-      "href": "{{RESUME_SHOWCASE_PAGE_LINK}}",
+      "href": "{{RESUME_LINK}}",
       "text": "My Resume"
     }
   ],
