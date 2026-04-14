@@ -513,7 +513,7 @@
     "href": "https://github.com/Astrogeek77/Svelte_feedback_app",
     "name": "Svelte Feedback App",
     "tags": ["box", "svelte", "development", "solo"],
-    "date": "15-3-2025",
+    "date": "15-03-2025",
     "rating": 8.2
   },
     {
@@ -547,6 +547,6 @@
     "name": "Pulse Relay Project",
     "tags": ["java", "spring", "boot", "system", "design", "patterns", "live", "original", "solo"],
     "date": "02-04-2026",
-    "rating": 9.4
+    "rating": 9.3
   }
 ]
