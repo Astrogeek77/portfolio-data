@@ -1,29 +1,25 @@
-name: Validate JSON Files
+name: Validate & Deploy
 
 on:
   push:
     paths:
       - '**.json'
-  pull_request:
-    paths:
-      - '**.json'
 
 jobs:
-  bulletproof-json-check:
+  validate-and-notify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Create Duplicate-Key Checker Script
+      - name: Create Duplicate-Key Checker
         run: |
           cat << 'EOF' > check_duplicates.py
           import json, sys
           def dict_raise_on_duplicates(ordered_pairs):
               d = {}
               for k, v in ordered_pairs:
-                  if k in d:
-                      raise ValueError(f"Duplicate key found: '{k}'")
+                  if k in d: raise ValueError(f"Duplicate key: '{k}'")
                   d[k] = v
               return d
           try:
@@ -34,48 +30,59 @@ jobs:
               sys.exit(1)
           EOF
 
-      - name: Run Multi-Layer Validation
+      - name: Validate JSON Data
+        id: validate
         run: |
-          echo "Starting Bulletproof JSON validation..."
           FAIL=0
-          
           while IFS= read -r -d '' file; do
-            echo "----------------------------------------"
-            echo "🔍 Checking: $file"
-            
-            # LAYER 1: Check if file is completely empty (0 bytes)
-            if [ ! -s "$file" ]; then
-              echo "❌ ERROR: File is completely empty!"
+            if [ ! -s "$file" ] || ! jq empty "$file" > /dev/null 2>&1 || ! python3 check_duplicates.py "$file"; then
               FAIL=1
-              continue
             fi
-
-            # LAYER 2: Strict Syntax & Unescaped Character Check (jq)
-            # This catches trailing commas, single quotes, unclosed brackets, and raw tabs/newlines
-            if ! jq empty "$file" > /dev/null 2>&1; then
-              echo "❌ SYNTAX ERROR: Invalid JSON format!"
-              # Print the exact line number of the syntax error
-              python3 -m json.tool "$file" > /dev/null || true
-              FAIL=1
-              continue
-            fi
-
-            # LAYER 3: Duplicate Key Check (Python custom script)
-            # This catches silent overwrites where you accidentally used the same key twice
-            if ! python3 check_duplicates.py "$file"; then
-              echo "❌ DATA ERROR: Duplicate keys detected!"
-              FAIL=1
-              continue
-            fi
-            
-            echo "✅ Passed all checks."
-            
           done < <(find . -type f -name "*.json" -print0)
-
-          echo "----------------------------------------"
-          if [ $FAIL -eq 1 ]; then
-            echo "🚨 VALIDATION FAILED! Please fix the errors listed above."
-            exit 1
-          fi
           
-          echo "🎉 SUCCESS: All JSON files are structurally perfect and safe for production!"
+          if [ $FAIL -eq 1 ]; then
+            echo "status=failed" >> $GITHUB_OUTPUT
+            exit 1
+          else
+            echo "status=success" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Webhooks & Send Email
+        if: always() # This forces the email step to run even if validation fails!
+        run: |
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          
+          if [ "${{ steps.validate.outputs.status }}" == "success" ]; then
+            JSON_STATUS="✅ Passed"
+            
+            # Trigger Vercel and grab the HTTP status code
+            VERCEL_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.VERCEL_WEBHOOK_URL }}")
+            if [ "$VERCEL_CODE" == "200" ]; then V_STATUS="✅ Success (200)"; else V_STATUS="❌ Failed ($VERCEL_CODE)"; fi
+            
+            # Trigger Netlify and grab the HTTP status code
+            NETLIFY_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.NETLIFY_WEBHOOK_URL }}")
+            if [ "$NETLIFY_CODE" == "200" ]; then N_STATUS="✅ Success (200)"; else N_STATUS="❌ Failed ($NETLIFY_CODE)"; fi
+            
+            SUBJECT="🚀 Portfolio Updated Successfully"
+          else
+            JSON_STATUS="❌ FAILED (Check GitHub Logs)"
+            V_STATUS="⏸️ Skipped (Due to JSON error)"
+            N_STATUS="⏸️ Skipped (Due to JSON error)"
+            SUBJECT="🚨 Portfolio Update FAILED"
+          fi
+
+          # Construct the HTML Email Payload
+          cat <<EOF > email_payload.json
+          {
+            "from": "Portfolio Bot <onboarding@resend.dev>",
+            "to": "astrogeek77@gmail.com",
+            "subject": "$SUBJECT",
+            "html": "<div style='font-family: sans-serif; max-width: 600px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;'><h2>Portfolio Deployment Report</h2><p><strong>Commit:</strong> $COMMIT_MSG</p><hr/><p><strong>JSON Validation:</strong> $JSON_STATUS</p><p><strong>Vercel Cache Clear:</strong> $V_STATUS</p><p><strong>Netlify Cache Clear:</strong> $N_STATUS</p><br/><p><a href='https://github.com/${{ github.repository }}/actions'>View GitHub Logs</a></p></div>"
+          }
+          EOF
+
+          # Send via Resend API
+          curl -X POST "https://api.resend.com/emails" \
+               -H "Authorization: Bearer ${{ secrets.RESEND_API_KEY }}" \
+               -H "Content-Type: application/json" \
+               -d @email_payload.json
