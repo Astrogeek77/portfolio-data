@@ -1,5 +1,6 @@
 {
   "portfolioShowcaseButtons": [
+    { "filter": "cpp", "name": "C++" },
     { "filter": "mern", "name": "MERN" }, 
     { "filter": "react", "name": "ReactJs" },
     { "filter": "python", "name": "Python" },
@@ -18,7 +19,6 @@
   "unusedFilters": [
     { "filter": "mongodb", "name": "MongoDB" },   
     { "filter": "oracle", "name": "Oracle" },
-    { "filter": "cpp", "name": "C++" },
     { "filter": "team", "name": "Teamwork" },
     { "filter": "flutter", "name": "Flutter" }
   ],
