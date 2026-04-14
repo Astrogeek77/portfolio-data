@@ -12,10 +12,10 @@
     { "filter": "css", "name": "CSS" },
     { "filter": "live", "name": "Live" },
     { "filter": "solo", "name": "Solo" },
+    { "filter": "fun", "name": "Fun" },
     { "filter": "mysql", "name": "SQL" }
   ],
   "unusedFilters": [
-    { "filter": "fun", "name": "Fun" },
     { "filter": "mongodb", "name": "MongoDB" },   
     { "filter": "oracle", "name": "Oracle" },
     { "filter": "cpp", "name": "C++" },
