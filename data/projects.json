@@ -435,7 +435,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/url_shortener_app",
     "name": "URL Shortner",
-    "tags": ["solo", "ansi regex", "mongodb"],
+    "tags": ["solo", "ansi regex", "mongodb", "design"],
     "date": "01-04-2021",
     "rating": 7.8
   },
@@ -468,7 +468,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Javascript_DSALGO",
     "name": "Javascript DSALGO",
-    "tags": ["javascript", "js", "ds", "dsalgo", "data structures", "algorithms", "data structures algorithms"],
+    "tags": ["code","javascript", "js", "ds", "dsalgo", "data structures", "algorithms", "data structures algorithms"],
     "date": "22-06-2024",
     "rating": 8.5
   },
@@ -501,7 +501,7 @@
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/Spring_boot_Codebase",
     "name": "Spring Boot Codebase",
-    "tags": ["box", "java", "live", "spring", "spring boot", "core java", "development", "design patterns"],
+    "tags": ["box", "java", "live", "spring", "spring boot", "core java", "development", "design", "patterns", ],
     "date": "15-02-2026",
     "rating": 9.0
   },
