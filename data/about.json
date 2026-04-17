@@ -19,20 +19,18 @@
     }
   ],
   "codingSkills": [
-    { "name": "Javascript", "percentage": 85 },
-    { "name": "SQL-PL/SQL", "percentage": 85 },
-    { "name": "Java", "percentage": 75 },
-    { "name": "Spring Boot", "percentage": 70 },
-    { "name": "Python", "percentage": 65 },
-    { "name": "Dart", "percentage": 60 }
+    { "name": "Javascript - MERN", "percentage": 85 },
+    { "name": "Database - SQL, PL/SQL, No-SQL", "percentage": 85 },
+    { "name": "Java - Spring Boot", "percentage": 75 },
+    { "name": "Python - Flask", "percentage": 60 },
+    { "name": "Flutter", "percentage": 50 }
   ],
   "professionalSkills": [
-    { "name": "Web Development", "percentage": 85 },
-    { "name": "Core CS Skills", "percentage": 70 },
-    { "name": "Database Management", "percentage": 70 },
-    { "name": "Mobile Development", "percentage": 55 },
-    { "name": "Japanese", "percentage": 35 },
-    { "name": "French/Spanish", "percentage": 30 }
+    { "name": "Software Development (Web and Mobile)", "percentage": 75 },
+    { "name": "Computer Science Skills", "percentage": 70 },
+    { "name": "Problem Solving", "percentage": 65 },
+    { "name": "System Design", "percentage": 60 },
+    { "name": "Database Management", "percentage": 60 }
   ],
   "techStack": [
     "C / C++",

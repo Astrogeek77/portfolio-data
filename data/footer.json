@@ -6,14 +6,9 @@
       "text": "Leetcode"
     },
     {
-      "name": "GFG profile",
-      "href": "{{GFG_LINK}}",
-      "text": "GFG"
-    },
-    {
-      "name": "hashnode blog",
-      "href": "{{BLOG_LINK}}",
-      "text": "My Blog"
+      "name": "Codechef profile",
+      "href": "{{CODECHEF_LINK}}",
+      "text": "Codechef"
     },
     {
       "name": "LinkedIn Profile",
@@ -21,15 +16,20 @@
       "text": "LinkedIn"
     },
     {
-      "name": "Discord Link",
-      "href": "{{DISCORD_LINK}}",
-      "text": "Discord"
+      "name": "Duolingo Link",
+      "href": "{{DUOLINGO_LINK}}",
+      "text": "Duolingo"
     },
     {
       "name": "Github Link",
       "href": "{{GITHUB_LINK}}",
       "text": "Github"
     },
+    {
+      "name": "hashnode blog",
+      "href": "{{BLOG_LINK}}",
+      "text": "My Blog"
+    }, 
     {
       "name": "Buy Me a Hot Coffee",
       "href": "{{BUY_COFFEE_LINK}}",

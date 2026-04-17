@@ -3,7 +3,7 @@
     { "filter": "web", "name": "Web Development" },
     { "filter": "css", "name": "CSS" },   
     { "filter": "project", "name": "Web Projects" },
-    { "filter": "git", "name": "Git" },
+    { "filter": "git", "name": "Git / Github" },
     { "filter": "oracle", "name": "Oracle ERP" },
     { "filter": "interface", "name": "Oracle Interfaces" }
   ],
