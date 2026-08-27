@@ -7,12 +7,15 @@
     { "filter": "live", "name": "Ongoing" }
   ],
  "featuredProjectIds": [
+    "GeneralizedRAGPipeline",
     "PulseRelayProject",
-    "bookHubProject",
     "SpringBootCodebase",
+    "bookHubProject",  
     "hospitalManagmentSystemProject",
+    "DSALGOCodebase",
+    "tnpgndecProject",
     "ecommerceAppReduxToolkit",
-    "DSALGOCodebase"
+    "videochatConferenceProject"
   ],
   "portfolioSectionLinks": [
     {

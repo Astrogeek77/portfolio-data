@@ -1,5 +1,5 @@
 {
-  "currentRole": "Programmer Analyst at Cognizant Technology Solutions",
+  "currentRole": "Software Engineer at Cognizant Technology Solutions",
   "paragraphEndLine": "I am always open to discussing emerging technologies, brainstorming innovative project ideas, and exploring new opportunities with product-driven companies. Feel free to connect with me on LinkedIn or check out my GitHub to see what I'm up to!",
   "aboutSectionLinks": [
     {
@@ -56,7 +56,7 @@
   "experience": [
     {
       "id": 1,
-      "role": "Programmer Analyst",
+      "role": "Software Engineer",
       "company": "Cognizant",
       "duration": "2024 - Present",
       "description": "Specializing in the development and automation of enterprise-grade applications within the Oracle EBS ecosystem. I leverage PL/SQL, Java, and Autosys to architect scalable solutions for complex business workflows.",
@@ -101,9 +101,16 @@
     {
       "id": 1,
       "degree": "Bachelor's in Computer Science",
-      "institution": "GNDEC, Ludhiana",
+      "institution": "Punjab Technical University, Patiala",
       "duration": "2019 - 2023",
       "description": "Focused on core Computer Science fundamentals, including DSA, DBMS, and Operating Systems, while maintaining active participation in competitive programming."
+    },
+     {
+      "id": 2,
+      "degree": "High School",
+      "institution": "BCM, Ludhiana",
+      "duration": "2017 - 2019",
+      "description": "Focused on Science concepts like Physics, Chemistry and Mathematics."
     }
   ]
 }

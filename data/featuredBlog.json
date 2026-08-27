@@ -5,7 +5,10 @@
     "p2pCycle",
     "o2cCycle",
     "oracleXMLBIPublisher",
-    "cssTools"
+    "cssTools",
+    "freeCSSAPis",
+    "vanillaProjects",
+    "oracleXMLBIPublisher"
   ],
   "blogSectionLinks": [
     {

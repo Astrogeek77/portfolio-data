@@ -13,6 +13,7 @@
     { "filter": "css", "name": "CSS" },
     { "filter": "live", "name": "Live" },
     { "filter": "solo", "name": "Solo" },
+    { "filter": "team", "name": "team" },
     { "filter": "fun", "name": "Fun" },
     { "filter": "mysql", "name": "SQL" }
   ],

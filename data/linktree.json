@@ -44,6 +44,7 @@
   "otherLinks": [
     { "name": "Mail Me", "href": "{{PRIMARY_MAIL_LINK}}", "icon": "fas fa-envelope" },
     { "name": "Secondary Mail", "href": "{{SECONDARY_MAIL_LINK}}", "icon": "fas fa-envelope" },
-    { "name": "My Resume", "href": "{{RESUME_LINK}}", "icon": "fas fa-file" }
+    { "name": "My Resume", "href": "{{RESUME_LINK}}", "icon": "fas fa-file" },
+    { "name": "My Team", "href": "https://github.com/Virtual-Sages", "icon": "fas fa-people-group" }
   ]
 }
