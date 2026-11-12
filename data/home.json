@@ -7,6 +7,9 @@
     "Astronomy Lover",
     "Tech Enthusiast"
   ],
+  "profileImageSrc": "/images/cover-photos/gautam-16.png",
+  "profileImageFallbackUrl":
+    "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/cover-photos/gautam-6.webp",
   "homeSectionLinks": [
     {
       "name": "Contact Section Link",
