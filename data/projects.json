@@ -1,563 +1,1282 @@
 [
-   {
-    "id": "GeneralizedRAGPipeline",
-    "class": "box java spring boot system design patterns live original RAG python flask team",
-    "src": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
-    "href": "https://github.com/Virtual-Sages/generalized-rag-pipeline",
-    "name": "Generalized RAG Pipeline",
-    "tags": ["java", "spring", "boot", "system", "design", "patterns", "live", "original", "team", "HLD", "LLD", "python", "flask", "RAG"],
-    "date": "02-04-2026",
-    "rating": 9.3
+  {
+    "id": "rag-pipeline",
+    "name": "Production RAG Pipeline & Agentic Workflow",
+    "summary": "A document-grounded retrieval pipeline built for low-latency LLM context assembly.",
+    "description": "Turns uploaded PDFs into searchable context: PyMuPDF extracts and chunks text, FastEmbed creates vectors, and pgVector returns relevant passages to a FastAPI agent workflow.",
+    "featured": true,
+    "category": "AI & data engineering",
+    "status": "Featured system",
+    "graphic": {
+      "label": "RETRIEVAL PIPELINE",
+      "nodes": [
+        "Documents",
+        "Embeddings",
+        "pgVector",
+        "Context"
+      ]
+    },
+    "problem": "Turn source documents into relevant, retrievable context for question answering and agent workflows.",
+    "architecture": [
+      "Ingestion extracts PDF text with PyMuPDF and splits it into retrieval-sized chunks.",
+      "FastEmbed creates vectors that are stored with document metadata in PostgreSQL pgVector.",
+      "A query is embedded and matched by vector similarity to retrieve relevant chunks.",
+      "Retrieved context is returned to the LLM or agent workflow for response generation."
+    ],
+    "components": [
+      {
+        "name": "Document ingestion",
+        "role": "Receives documents and coordinates parsing and indexing."
+      },
+      {
+        "name": "PyMuPDF",
+        "role": "Extracts text from PDF documents."
+      },
+      {
+        "name": "Chunker & FastEmbed",
+        "role": "Creates retrieval chunks and vector embeddings."
+      },
+      {
+        "name": "PostgreSQL + pgVector",
+        "role": "Stores vectors and performs similarity retrieval."
+      },
+      {
+        "name": "FastAPI + Uvicorn",
+        "role": "Serves ingestion and retrieval endpoints."
+      },
+      {
+        "name": "LLM / agent workflow",
+        "role": "Consumes retrieved context to produce a grounded result."
+      }
+    ],
+    "techStack": [
+      {
+        "name": "Python",
+        "role": "Pipeline implementation"
+      },
+      {
+        "name": "FastAPI",
+        "role": "Ingestion and retrieval API"
+      },
+      {
+        "name": "Uvicorn",
+        "role": "ASGI server"
+      },
+      {
+        "name": "PyMuPDF",
+        "role": "PDF text extraction"
+      },
+      {
+        "name": "FastEmbed",
+        "role": "Text embeddings"
+      },
+      {
+        "name": "PostgreSQL + pgVector",
+        "role": "Vector storage and similarity search"
+      }
+    ],
+    "designNotes": [
+      "Separate document ingestion from query-time retrieval.",
+      "Keep chunk metadata alongside embeddings so retrieved context can be traced to its source.",
+      "Optimize the retrieval path to return a compact context set for downstream generation."
+    ],
+    "flow": [
+      "PDF documents",
+      "PyMuPDF extraction",
+      "Chunking",
+      "FastEmbed vectors",
+      "pgVector index",
+      "Similarity search",
+      "LLM / agent context"
+    ],
+    "mermaid": "sequenceDiagram\n  actor Docs as PDF Documents\n  participant Ingest as Ingestion API\n  participant Embed as FastEmbed\n  participant Store as PostgreSQL pgVector\n  actor User\n  participant Retrieve as Retrieval API\n  participant Agent as LLM / Agent\n  Docs->>Ingest: Upload documents\n  Ingest->>Embed: Extract, chunk & embed\n  Embed->>Store: Store vectors\n  User->>Retrieve: Ask question\n  Retrieve->>Store: Similarity search\n  Store-->>Retrieve: Relevant chunks\n  Retrieve->>Agent: Provide grounded context",
+    "href": "https://github.com/search?q=user%3AAstrogeek77+RAG+pipeline+pgvector&type=repositories",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "PyMuPDF",
+      "FastEmbed",
+      "pgVector"
+    ]
   },
   {
-    "id": "PulseRelayProject",
-    "class": "box java spring boot system design patterns live original",
-    "src": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/refs/heads/main/Website%20Assets/projectrelay_portfolio_cover.webp",
-    "href": "https://github.com/Astrogeek77/pulserelay",
-    "name": "Pulse Relay Project",
-    "tags": ["java", "spring", "boot", "system", "design", "patterns", "live", "original", "solo"],
-    "date": "02-04-2026",
-    "rating": 9.1
+    "id": "order-processing-saga",
+    "name": "Distributed Order Processing Saga",
+    "summary": "Event-driven order workflows coordinated across independently deployable services.",
+    "description": "Takes an order from API submission through Kafka events to inventory and payment services, coordinating completion or compensation while persisting workflow state in PostgreSQL.",
+    "featured": true,
+    "category": "Distributed systems",
+    "status": "Featured system",
+    "graphic": {
+      "label": "EVENT-DRIVEN ORDER FLOW",
+      "nodes": [
+        "Order API",
+        "Kafka",
+        "Services",
+        "State"
+      ]
+    },
+    "problem": "Coordinate a multi-service order lifecycle while keeping each service independently deployable.",
+    "architecture": [
+      "Order API accepts a request and records the initial order state.",
+      "Kafka carries lifecycle events between order, inventory, and payment services.",
+      "Saga coordination supports choreography and orchestration patterns for workflow progression and compensation.",
+      "Idempotent consumers make event retries and replays safer."
+    ],
+    "components": [
+      {
+        "name": "Order API",
+        "role": "Accepts order requests and starts the workflow."
+      },
+      {
+        "name": "Order Service",
+        "role": "Owns order state and emits lifecycle events."
+      },
+      {
+        "name": "Kafka",
+        "role": "Transports order events between service boundaries."
+      },
+      {
+        "name": "Inventory & Payment",
+        "role": "Consume events and participate in saga progression."
+      },
+      {
+        "name": "PostgreSQL",
+        "role": "Persists service data and order state."
+      }
+    ],
+    "techStack": [
+      {
+        "name": "Java",
+        "role": "Service implementation"
+      },
+      {
+        "name": "Spring Boot",
+        "role": "HTTP APIs and application services"
+      },
+      {
+        "name": "Apache Kafka",
+        "role": "Event transport"
+      },
+      {
+        "name": "PostgreSQL",
+        "role": "Relational persistence"
+      },
+      {
+        "name": "Docker",
+        "role": "Containerized deployment"
+      }
+    ],
+    "designNotes": [
+      "Keep service ownership explicit and communicate through domain events.",
+      "Make handlers idempotent so duplicate delivery does not repeat business effects.",
+      "Model saga failure paths with compensating actions rather than assuming a distributed transaction."
+    ],
+    "flow": [
+      "Client",
+      "Order API",
+      "Order Service",
+      "Kafka events",
+      "Inventory & Payment",
+      "PostgreSQL state"
+    ],
+    "mermaid": "sequenceDiagram\n  actor Client\n  participant API as Order API\n  participant Kafka as Apache Kafka\n  participant Services as Order Services\n  participant DB as PostgreSQL\n  Client->>API: Submit order\n  API->>Kafka: Publish order event\n  Kafka->>Services: Deliver lifecycle event\n  Services->>DB: Persist order state",
+    "href": "https://github.com/search?q=user%3AAstrogeek77+distributed+order+processing+saga&type=repositories",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "Apache Kafka",
+      "PostgreSQL",
+      "Docker"
+    ]
   },
   {
-    "id": "bookHubProject",
+    "id": "pulserelay",
+    "name": "PulseRelay",
+    "summary": "A real-time event and message relay designed around scalable backend throughput.",
+    "description": "Accepts producer events through a high-throughput API, routes each message to its subscriber channel, and separates ingress from delivery so relay capacity can scale independently.",
+    "featured": true,
+    "category": "Real-time systems",
+    "status": "Featured system",
+    "graphic": {
+      "label": "REAL-TIME MESSAGE RELAY",
+      "nodes": [
+        "Producer",
+        "Relay API",
+        "Routing",
+        "Subscribers"
+      ]
+    },
+    "problem": "Relay events and messages between producers and subscribers through a scalable backend API.",
+    "architecture": [
+      "Producer clients submit events through a high-throughput API.",
+      "Relay services route messages to the appropriate subscriber channels.",
+      "Independent service boundaries allow relay capacity to scale with traffic."
+    ],
+    "components": [
+      {
+        "name": "Producers",
+        "role": "Publish events and messages."
+      },
+      {
+        "name": "Relay API",
+        "role": "Accepts and validates inbound traffic."
+      },
+      {
+        "name": "Routing layer",
+        "role": "Dispatches events to subscriber channels."
+      },
+      {
+        "name": "Relay workers",
+        "role": "Deliver messages to connected subscribers."
+      },
+      {
+        "name": "Subscribers",
+        "role": "Receive routed events in real time."
+      }
+    ],
+    "techStack": [
+      {
+        "name": "Backend API",
+        "role": "High-throughput event ingress"
+      },
+      {
+        "name": "Event relay",
+        "role": "Message routing and delivery"
+      },
+      {
+        "name": "Scalable services",
+        "role": "Independent capacity boundaries"
+      }
+    ],
+    "designNotes": [
+      "Separate event ingress, routing, and delivery responsibilities.",
+      "Design the API and relay workers to scale independently as throughput changes.",
+      "Keep transport and persistence details abstract until they are confirmed by the implementation."
+    ],
+    "flow": [
+      "Producer clients",
+      "Relay API",
+      "Event routing",
+      "Relay workers",
+      "Subscriber channels"
+    ],
+    "mermaid": "sequenceDiagram\n  actor Producer\n  participant API as Relay API\n  participant Router as Event Router\n  participant Workers as Relay Workers\n  actor Subscriber\n  Producer->>API: Publish event\n  API->>Router: Validate and route\n  Router->>Workers: Dispatch message\n  Workers-->>Subscriber: Deliver event",
+    "href": "https://github.com/search?q=user%3AAstrogeek77+PulseRelay&type=repositories",
+    "tags": [
+      "Backend",
+      "Real-time systems",
+      "Event relay",
+      "API design"
+    ]
+  },
+  {
+    "id": "bookhub-recommendations",
     "name": "Bookhub with recommendation system (Major)",
+    "summary": "Personalized collaborative filtering over a catalog of 100,000+ books.",
+    "description": "Uses reader interaction patterns across a 100,000+ book catalog: Pearson Correlation finds similar readers, KNN ranks candidate books, and Flask serves recommendations to a React interface.",
+    "featured": true,
+    "category": "Recommendation systems",
+    "graphic": {
+      "label": "COLLABORATIVE FILTERING",
+      "nodes": [
+        "Book Catalog",
+        "Similarity",
+        "KNN",
+        "Recommendations"
+      ]
+    },
+    "status": "Featured system",
+    "problem": "Help readers discover books using collaborative patterns across a large catalog.",
+    "architecture": [
+      "The catalog and interaction data provide the inputs for collaborative filtering.",
+      "Pearson Correlation estimates similarity between readers.",
+      "KNN selects neighboring users or items to produce personalized recommendations.",
+      "A Flask backend serves recommendations to the React.js experience."
+    ],
+    "components": [
+      {
+        "name": "100,000+ book catalog",
+        "role": "Provides the book dataset for discovery."
+      },
+      {
+        "name": "Collaborative filtering",
+        "role": "Calculates similarity and recommendation candidates."
+      },
+      {
+        "name": "Pearson Correlation",
+        "role": "Measures user-neighborhood similarity."
+      },
+      {
+        "name": "KNN",
+        "role": "Selects nearest neighbors for recommendation results."
+      },
+      {
+        "name": "Flask API + React.js",
+        "role": "Serves and presents personalized recommendations."
+      }
+    ],
+    "techStack": [
+      {
+        "name": "Python",
+        "role": "Recommendation logic"
+      },
+      {
+        "name": "Flask",
+        "role": "Recommendation API"
+      },
+      {
+        "name": "KNN",
+        "role": "Neighbor-based candidate selection"
+      },
+      {
+        "name": "Pearson Correlation",
+        "role": "Similarity scoring"
+      },
+      {
+        "name": "React.js",
+        "role": "User-facing application"
+      }
+    ],
+    "designNotes": [
+      "Use collaborative signals to personalize discovery rather than relying only on book metadata.",
+      "Separate similarity scoring from API and presentation concerns.",
+      "Measure recommendation latency and refresh strategy against the actual deployment."
+    ],
+    "flow": [
+      "Book catalog & interactions",
+      "Pearson similarity",
+      "KNN neighbors",
+      "Flask recommendation API",
+      "React.js UI"
+    ],
+    "mermaid": "sequenceDiagram\n  actor Reader\n  participant UI as React.js\n  participant API as Flask API\n  participant Model as Pearson + KNN\n  participant Catalog as Book Catalog\n  Reader->>UI: Request recommendations\n  UI->>API: Send reader context\n  API->>Model: Find similar readers\n  Model->>Catalog: Select book candidates\n  Catalog-->>Model: Candidate books\n  Model-->>API: Ranked recommendations\n  API-->>UI: Return recommendations",
     "class": "box mern team",
     "src": "/images/apps/bookhub.webp",
     "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/bookhub.webp",
     "href": "https://github.com/GNDEC-Minor-Project-KGJ",
-    "tags": ["mern", "team", "major project", "KGJ", "javascript", "js", "tailwindcss", "react", "reactjs", "mongodb"],
+    "tags": [
+      "mern",
+      "team",
+      "major project",
+      "KGJ",
+      "javascript",
+      "js",
+      "tailwindcss",
+      "react",
+      "reactjs",
+      "mongodb"
+    ],
     "date": "17-12-2022",
-    "rating": 9.0
+    "rating": 9
   },
   {
-    "id": "SpringBootCodebase",
-    "class": "box live java spring springboot design patterns",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Spring_boot_Codebase",
-    "name": "Spring Boot Codebase",
-    "tags": ["box", "java", "live", "spring", "spring boot", "core java", "development", "design", "patterns"],
-    "date": "15-02-2026",
-    "rating": 9.0
+    "id": "portfolio-html-css-js",
+    "name": "Portfolio HTML CSS JS",
+    "src": "/images/apps/portfolio.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/portfolio.webp",
+    "class": "box css solo original live",
+    "href": "https://icodergautam.netlify.app",
+    "tags": [
+      "mern",
+      "css",
+      "solo",
+      "original",
+      "personal",
+      "website",
+      "vanilla"
+    ],
+    "date": "17-12-2023",
+    "rating": 8.5,
+    "featured": false,
+    "description": "A project exploring mern, css, solo."
   },
   {
-    "id": "DSALGOCodebase",
-    "name": "DS-ALGO-CP Codebase",
-    "class": "box code cpp",
-    "src": "/images/code/dsalgo-cp.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/dsalgo-cp.webp",
-    "href": "https://github.com/Astrogeek77/DSALGO-and-CP",
-    "tags": ["code", "cpp", "data structures", "algorithms", "array", "linkedlist", "queue", "trees", "graph", "stack", "learning", "ds", "dsalgo", "algo"],
-    "date": "24-12-2023",
-    "rating": 8.9
+    "id": "portfolio-website-legacy",
+    "class": "box css solo original",
+    "src": "/images/apps/portfolio-website.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/portfolio-website.webp",
+    "href": "https://github.com/Astrogeek77/portfolio",
+    "name": "Portfolio Website",
+    "tags": [
+      "css",
+      "solo",
+      "original",
+      "old",
+      "vanilla",
+      "learning"
+    ],
+    "date": "01-10-2021",
+    "rating": 8,
+    "featured": false,
+    "description": "A project exploring css, solo, original."
   },
   {
-    "id": "tnpgndecProject",
+    "id": "tnp-gndec-website",
     "name": "TNP, GNDEC Website",
     "class": "box team mern",
     "src": "/images/apps/tnp-website.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/tnp-website.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/tnp-website.webp",
     "href": "https://tnpgndec.com",
-    "tags": ["team", "mern", "laravel", "php", "tnpgndec", "javascript", "js", "materialUI", "mysql", "phpmyadmin", "reactjs", "react"],
+    "tags": [
+      "team",
+      "mern",
+      "laravel",
+      "php",
+      "tnpgndec",
+      "javascript",
+      "js",
+      "materialUI",
+      "mysql",
+      "phpmyadmin",
+      "reactjs",
+      "react"
+    ],
     "date": "26-12-2022",
-    "rating": 8.8
+    "rating": 8.8,
+    "featured": false,
+    "description": "A project exploring team, mern, laravel."
   },
   {
-    "id": "hospitalManagmentSystemProject",
-    "class": "box java solo",
-    "src": "/images/apps/HMS.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/HMS.webp",
-    "href": "https://github.com/Astrogeek77/Hospital_Management_System",
-    "name": "Hospital Managment System Webapp (JSP + servlets)",
-    "tags": ["java", "solo", "servlets", "jsp", "mysql"],
-    "date": "13-08-2023",
-    "rating": 8.75
-  },
-  {
-    "id": "ecommerceAppReduxToolkit",
-    "class": "box mern solo",
-    "src": "/images/apps/ecomm-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/ecomm-app.webp",
-    "href": "https://github.com/Astrogeek77/Ecommerce_app_with_redux_toolkit",
-    "name": "Ecommerce App with Redux Toolkit",
-    "tags": ["mern", "solo", "redux", "javascript", "js"],
-    "date": "08-09-2023",
-    "rating": 8.75
-  },
-  {
-    "id": "realEstateProject",
-    "class": "box mern solo",
-    "src": "/images/apps/real-estate-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/real-estate-app.webp",
-    "href": "https://github.com/Astrogeek77/Real_Estate_App",
-    "name": "Real Estate pedia",
-    "tags": ["mern", "solo", "learning", "chakra UI", "javascript", "js", "react", "reactjs", "nextjs", "vercel"],
-    "date": "01-05-2023",
-    "rating": 8.7
-  },
-  {
-    "id": "customReactHooks",
-    "class": "box original",
-    "src": "/images/Originals/custom_react_hooks.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/custom_react_hooks.webp",
-    "href": "https://github.com/Astrogeek77/custom-react-hooks",
-    "name": "Custom React Hooks",
-    "tags": ["original", "react", "reactjs"],
-    "date": "19-12-2022",
-    "rating": 8.7
-  },
-  {
-    "id": "reactDashboardWithNextauth",
-    "class": "box mern solo",
-    "src": "/images/apps/react_dashboard.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/react_dashboard.webp",
-    "href": "https://github.com/Astrogeek77/React_Dashboard_with_nextauth",
-    "name": "React Dashboard with NextAuth",
-    "tags": ["mern", "solo", "javascript", "js", "nextjs"],
-    "date": "31-07-2023",
-    "rating": 8.65
-  },
-  {
-    "id": "springBootQuizBackend",
-    "class": "box solo spring java system",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/QuizAppBackendSpringBoot",
-    "name": "Spring Boot Backend App",
-    "tags": ["solo", "java", "spring", "spring-boot", "mysql", "reactjs", "jpa"],
-    "date": "18-12-2023",
-    "rating": 8.65
-  },
-  {
-    "id": "videochatConferenceProject",
-    "class": "box mern team",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Mantra-internship/videochat-app",
-    "name": "video-chat Conference App",
-    "tags": ["mern", "team", "webrtc", "peerjs", "socket", "javascript", "js", "react", "reactjs", "mongodb"],
-    "date": "01-08-2022",
-    "rating": 8.6
-  },
-  {
-    "id": "springBootAuthCRUD",
-    "class": "box solo spring java system",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/SpringBootAuth",
-    "name": "Spring Boot Auth App",
-    "tags": ["solo", "java", "spring", "spring-boot", "mysql", "spring-security", "jpa", "system"],
-    "date": "23-12-2023",
-    "rating": 8.6
-  },
-  {
-    "id": "reactDashboardWithNextauth2",
-    "class": "box mern solo",
-    "src": "/images/apps/next-auth-dashbaord-2.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/next-auth-dashbaord-2.webp",
-    "href": "https://github.com/Astrogeek77/React_Dashboard_with_nextauth_2",
-    "name": "React Dashboard with NextAuth 2",
-    "tags": ["mern", "solo", "ts", "typescript", "nextjs"],
-    "date": "11-08-2023",
-    "rating": 8.55
-  },
-  {
-    "id": "portfolioProjectVanilla",
-    "name": "Portfolio HTML CSS JS",
-    "src": "/images/apps/portfolio.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/portfolio.webp",
-    "class": "box css solo original live",
-    "href": "https://icodergautam.netlify.app",
-    "tags": ["mern", "css", "solo", "original", "personal", "website", "vanilla"],
-    "date": "17-12-2023",
-    "rating": 8.5
-  },
-  {
-    "id": "customWebComponents",
-    "class": "box original",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/custom_web_components",
-    "name": "Custom Web Components",
-    "tags": ["original", "vanilla"],
-    "date": "29-03-2023",
-    "rating": 8.5
-  },
-  {
-    "id": "javascriptDSALGO",
-    "class": "box code javascript js",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Javascript_DSALGO",
-    "name": "Javascript DSALGO",
-    "tags": ["code", "javascript", "js", "ds", "dsalgo", "data structures", "algorithms", "data structures algorithms"],
-    "date": "22-06-2024",
-    "rating": 8.5
-  },
-  {
-    "id": "MatrimonialCMSProject",
-    "class": "box mern team",
-    "src": "/images/code/leetcode-gfg-solutions.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
-    "href": "https://github.com/orgs/Aggarwal-Pavitra-Bandhan/repositories",
-    "name": "Matrimonial CMS Webapp",
-    "tags": ["mern", "team", "nodejs", "javascript", "js", "react", "reactjs"],
-    "date": "26-10-2023",
-    "rating": 8.5
-  },
-  {
-    "id": "LC30JSChallenge",
-    "class": "box challenges",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/30_Day_of_LC_Javascript",
-    "name": "30 Day LC JS Challenge",
-    "tags": ["challenges", "leetcode", "javascript", "js"],
-    "date": "03-07-2023",
-    "rating": 8.45
-  },
-  {
-    "id": "proshopProject",
-    "class": "box mern team",
-    "src": "/images/apps/e-cell-website.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/e-cell-website.webp",
-    "href": "https://github.com/Astrogeek77/proshop_mern_training_project",
-    "name": "Proshop E-Commerce App",
-    "tags": ["mern", "team", "training", "dashboard", "javascript", "js", "react", "reactjs", "mongodb"],
-    "date": "03-07-2023",
-    "rating": 8.4
-  },
-  {
-    "id": "notesTSProject",
-    "class": "box mern solo",
-    "src": "/images/Originals/web_projects_2020.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
-    "href": "https://github.com/Astrogeek77/Notes_App",
-    "name": "Notes App (Typescript + react)",
-    "tags": ["mern", "solo", "typescript", "ts", "react", "reactjs", "localstorage"],
-    "date": "12-09-2023",
-    "rating": 8.4
-  },
-  {
-    "id": "webProjects2023",
-    "class": "box fun challenges original css",
-    "src": "/images/live/wd-23.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/live/wd-23.webp",
-    "href": "https://github.com/Astrogeek77/Web_Dev_2023",
-    "name": "Web Mini Projects 2023",
-    "tags": ["fun", "challenges", "original", "css", "mini projects"],
-    "date": "29-12-2023",
-    "rating": 8.4
-  },
-  {
-    "id": "OracleERPEBSTraining",
-    "class": "box oracle ebs eps training cognizant",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Cognizant_Oracle_training",
-    "name": "Oracle ERP EBS Training",
-    "tags": ["box", "oracle", "ebs", "eps", "training", "cognizant"],
-    "date": "26-04-2024",
-    "rating": 8.4
-  },
-  {
-    "id": "Python100Days",
-    "class": "box practice python",
-    "src": "/images/Challenges/100daysofpython.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Challenges/100daysofpython.webp",
-    "href": "https://github.com/Astrogeek77/100DaysofPython",
-    "name": "100 Days of Python",
-    "tags": ["practice", "python"],
-    "date": "14-03-2023",
-    "rating": 8.35
-  },
-  {
-    "id": "chessProblems",
-    "class": "box original cpp",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Chess_Problems",
-    "name": "Chess Problems",
-    "tags": ["original", "cpp", "problem solving", "learning"],
-    "date": "21-05-2022",
-    "rating": 8.3
-  },
-  {
-    "id": "OracleTechnoFunctionalCourse",
-    "class": "box oracle ebs eps training cognizant",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Oracle-Techno-Functional-Course",
-    "name": "Oracle Techno Functional Course",
-    "tags": ["box", "oracle", "ebs", "eps", "training", "cognizant", "p2p", "o2c", "interface", "conversion", "reports"],
-    "date": "13-07-2024",
-    "rating": 8.3
-  },
-  {
-    "id": "leetcodeSolutions",
-    "class": "box code live",
-    "src": "/images/code/leetcode-gfg-solutions.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
-    "href": "https://github.com/Astrogeek77/Leetcode_GFG_solutions",
-    "name": "Leetcode-GFG-Solutions",
-    "tags": ["code", "live", "leetcode", "gfg", "geeksforgeeks", "learning", "problem solving"],
-    "date": "11-09-2023",
-    "rating": 8.25
-  },
-  {
-    "id": "javaPracticeProjects",
-    "class": "box java live",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Java_web_dev_projects/",
-    "name": "Java Practice Projects",
-    "tags": ["java", "live", "learning", "development"],
-    "date": "13-08-2023",
-    "rating": 8.24
-  },
-  {
-    "id": "oldResumeShowcase",
-    "class": "box css original",
-    "src": "/images/Originals/Resume_showcase.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/Resume_showcase.webp",
-    "href": "https://github.com/Astrogeek77/resume",
-    "name": "Old Resume Showcase",
-    "tags": ["css", "original"],
-    "date": "10-06-2022",
-    "rating": 8.2
-  },
-  {
-    "id": "cppProjects",
-    "class": "box original cpp",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/CPP_Projects",
-    "name": "CPP Projects",
-    "tags": ["original", "cpp", "problem solving", "learning", "sheets"],
-    "date": "14-10-2022",
-    "rating": 8.2
-  },
-  {
-    "id": "cssbattleCodebase",
-    "class": "box challenges css",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/CSS_Battles_Codebase",
-    "name": "CSS Battle Competitive Codebase",
-    "tags": ["challenges", "css", "compete", "original"],
-    "date": "15-07-2023",
-    "rating": 8.2
-  },
-  {
-    "id": "flutterPracticeProjects",
-    "class": "box flutter solo",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Flutter_Projects",
-    "name": "Flutter Practice Projects",
-    "tags": ["flutter", "solo", "dart", "mobile", "web", "windows"],
-    "date": "03-07-2023",
-    "rating": 8.2
-  },
-  {
-    "id": "SvelteFeedbackApp",
-    "class": "box java spring springboot projects",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Svelte_feedback_app",
-    "name": "Svelte Feedback App",
-    "tags": ["box", "svelte", "development", "solo"],
-    "date": "15-03-2025",
-    "rating": 8.2
-  },
-  {
-    "id": "memeGeneratorProject",
-    "class": "box fun solo",
-    "src": "/images/apps/Meme_Generator.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/Meme_Generator.webp",
-    "href": "https://github.com/Astrogeek77/Meme_Generator",
-    "name": "Meme Generator",
-    "tags": ["fun", "solo", "create meme"],
-    "date": "19-01-2022",
-    "rating": 8.1
-  },
-  {
-    "id": "backendPracticeProjects",
-    "class": "box mern solo",
-    "src": "/images/Originals/web_projects_2020.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
-    "href": "https://github.com/Astrogeek77/Backend_Practice_Projects",
-    "name": "Backend Practice Projects",
-    "tags": ["mern", "solo", "nodejs", "javascript", "js"],
-    "date": "07-07-2023",
-    "rating": 8.1
-  },
-  {
-    "id": "dailyCodingChallenge",
-    "class": "box challenges original css",
-    "src": "/images/Challenges/dcc-21.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Challenges/dcc-21.webp",
-    "href": "https://github.com/Astrogeek77/Daily_Coding_Challenge_2021",
-    "name": "Daily Coding Challenge 2021",
-    "tags": ["challenges", "original", "css", "learning", "dcc21", "mini projects"],
-    "date": "25-01-2022",
-    "rating": 8.1
-  },
-  {
-    "id": "MyGithubReadme",
-    "class": "box markdown live",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Astrogeek77",
-    "name": "Github Readme",
-    "tags": ["markdown", "github", "live", ".md", "profile", "readme"],
-    "date": "15-05-2024",
-    "rating": 8.1
-  },
-  {
-    "id": "todoAppBackend",
-    "class": "box solo mern",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Todo-app-backend",
-    "name": "Backend for todo app",
-    "tags": ["solo", "nodejs", "js", "javascript"],
-    "date": "15-04-2023",
-    "rating": 8.05
-  },
-  {
-    "id": "oldPortfolioProjectVanilla",
-    "class": "box css solo original",
-    "src": "/images/apps/portfolio-website.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/portfolio-website.webp",
-    "href": "https://github.com/Astrogeek77/portfolio",
-    "name": "Portfolio Website",
-    "tags": ["css", "solo", "original", "old", "vanilla", "learning"],
-    "date": "01-10-2021",
-    "rating": 8.0
-  },
-  {
-    "id": "ecellGndecProject",
     "name": "E-Cell, GNDEC Website",
     "class": "box team mern",
     "src": "/images/apps/e-cell-website.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/e-cell-website.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/e-cell-website.webp",
     "href": "https://github.com/Astrogeek77/Entrepreneurship-Cell-official-Website-Codebase",
-    "tags": ["team", "mern", "ejs", "tailwind", "javascript", "js", "mongodb"],
+    "tags": [
+      "team",
+      "mern",
+      "ejs",
+      "tailwind",
+      "javascript",
+      "js",
+      "mongodb"
+    ],
     "date": "03-08-2021",
-    "rating": 8.0
+    "rating": 8,
+    "id": "https-github-com-astrogeek77-entrepreneurship-cell-official-website-codebase",
+    "featured": false,
+    "description": "A project exploring team, mern, ejs."
   },
   {
-    "id": "covid19TrackerProject",
+    "name": "DS-ALGO-CP Codebase",
+    "class": "box code cpp",
+    "src": "/images/code/dsalgo-cp.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/dsalgo-cp.webp",
+    "href": "https://github.com/Astrogeek77/DSALGO-and-CP",
+    "tags": [
+      "code",
+      "cpp",
+      "data structures",
+      "algorithms",
+      "array",
+      "linkedlist",
+      "queue",
+      "trees",
+      "graph",
+      "stack",
+      "learning",
+      "ds",
+      "dsalgo",
+      "algo"
+    ],
+    "date": "24-12-2023",
+    "rating": 8.9,
+    "id": "https-github-com-astrogeek77-dsalgo-and-cp",
+    "featured": false,
+    "description": "A project exploring code, cpp, data structures."
+  },
+  {
     "class": "box mern solo",
     "src": "/images/apps/Covid-tracker.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/Covid-tracker.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/Covid-tracker.webp",
     "href": "https://github.com/Astrogeek77/Covid-19_Tracker_2021",
     "name": "Covid-19 Realtime Tracker",
-    "tags": ["mern", "solo", "pandemic", "learning", "javascript", "js", "api", "disease.sh", "reactjs", "react"],
+    "tags": [
+      "mern",
+      "solo",
+      "pandemic",
+      "learning",
+      "javascript",
+      "js",
+      "api",
+      "disease.sh",
+      "reactjs",
+      "react"
+    ],
     "date": "15-07-2021",
-    "rating": 8.0
+    "rating": 8,
+    "id": "https-github-com-astrogeek77-covid-19-tracker-2021",
+    "featured": false,
+    "description": "A project exploring mern, solo, pandemic."
   },
   {
-    "id": "webProjects2021",
-    "class": "box original css fun",
-    "src": "/images/Originals/web_dev_2021.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_dev_2021.webp",
-    "href": "https://github.com/Astrogeek77/Web_Dev_2021",
-    "name": "Web mini Projects 2021",
-    "tags": ["original", "css", "fun", "mini projects", "learning"],
-    "date": "21-11-2021",
-    "rating": 8.0
+    "class": "box mern team",
+    "src": "/images/apps/e-cell-website.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/e-cell-website.webp",
+    "href": "https://github.com/Astrogeek77/proshop_mern_training_project",
+    "name": "Proshop E-Commerce App",
+    "tags": [
+      "mern",
+      "team",
+      "training",
+      "dashboard",
+      "javascript",
+      "js",
+      "react",
+      "reactjs",
+      "mongodb"
+    ],
+    "date": "03-07-2023",
+    "rating": 8.4,
+    "id": "https-github-com-astrogeek77-proshop-mern-training-project",
+    "featured": false,
+    "description": "A project exploring mern, team, training."
   },
   {
-    "id": "flaskPractice",
-    "class": "box python",
+    "class": "box mern solo",
+    "src": "/images/apps/real-estate-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/real-estate-app.webp",
+    "href": "https://github.com/Astrogeek77/Real_Estate_App",
+    "name": "Real Estate pedia",
+    "tags": [
+      "mern",
+      "solo",
+      "learning",
+      "chakra UI",
+      "javascript",
+      "js",
+      "react",
+      "reactjs",
+      "nextjs",
+      "vercel"
+    ],
+    "date": "01-05-2023",
+    "rating": 8.7,
+    "id": "https-github-com-astrogeek77-real-estate-app",
+    "featured": false,
+    "description": "A project exploring mern, solo, learning."
+  },
+  {
+    "class": "box mern team",
     "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/flask-test-website",
-    "name": "Flask Practice webapp",
-    "tags": ["python", "mysql", "planetscale", "flask"],
-    "date": "04-03-2023",
-    "rating": 8.0
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Mantra-internship/videochat-app",
+    "name": "video-chat Conference App",
+    "tags": [
+      "mern",
+      "team",
+      "webrtc",
+      "peerjs",
+      "socket",
+      "javascript",
+      "js",
+      "react",
+      "reactjs",
+      "mongodb"
+    ],
+    "date": "01-08-2022",
+    "rating": 8.6,
+    "id": "https-github-com-mantra-internship-videochat-app",
+    "featured": false,
+    "description": "A project exploring mern, team, webrtc."
   },
   {
-    "id": "cssLayoutPractice",
-    "class": "box css",
+    "class": "box css original",
+    "src": "/images/Originals/Resume_showcase.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/Resume_showcase.webp",
+    "href": "https://github.com/Astrogeek77/resume",
+    "name": "Old Resume Showcase",
+    "tags": [
+      "css",
+      "original"
+    ],
+    "date": "10-06-2022",
+    "rating": 8.2,
+    "id": "https-github-com-astrogeek77-resume",
+    "featured": false,
+    "description": "A project exploring css, original."
+  },
+  {
+    "class": "box fun solo",
+    "src": "/images/apps/Meme_Generator.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/Meme_Generator.webp",
+    "href": "https://github.com/Astrogeek77/Meme_Generator",
+    "name": "Meme Generator",
+    "tags": [
+      "fun",
+      "solo",
+      "create meme"
+    ],
+    "date": "19-01-2022",
+    "rating": 8.1,
+    "id": "https-github-com-astrogeek77-meme-generator",
+    "featured": false,
+    "description": "A project exploring fun, solo, create meme."
+  },
+  {
+    "class": "box original",
     "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/CSS-Grid-Layout-Practice",
-    "name": "CSS Layout Practice",
-    "tags": ["css", "grid", "flex", "grid area", "flex box"],
-    "date": "25-05-2023",
-    "rating": 8.0
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/custom_web_components",
+    "name": "Custom Web Components",
+    "tags": [
+      "original",
+      "vanilla"
+    ],
+    "date": "29-03-2023",
+    "rating": 8.5,
+    "id": "https-github-com-astrogeek77-custom-web-components",
+    "featured": false,
+    "description": "A project exploring original, vanilla."
   },
   {
-    "id": "SimpleFileSharingApp",
-    "class": "box solo",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/file-Share-App",
-    "name": "File Sharing App",
-    "tags": ["solo", "multer", "mongodb"],
-    "date": "19-09-2022",
-    "rating": 7.9
+    "class": "box original",
+    "src": "/images/Originals/custom_react_hooks.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/custom_react_hooks.webp",
+    "href": "https://github.com/Astrogeek77/custom-react-hooks",
+    "name": "Custom React Hooks",
+    "tags": [
+      "original",
+      "react",
+      "reactjs"
+    ],
+    "date": "19-12-2022",
+    "rating": 8.7,
+    "id": "https-github-com-astrogeek77-custom-react-hooks",
+    "featured": false,
+    "description": "A project exploring original, react, reactjs."
   },
   {
-    "id": "glassmorphismProjects",
-    "class": "box solo css",
-    "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
-    "href": "https://github.com/Astrogeek77/Glassmorphism",
-    "name": "Glassmorphism",
-    "tags": ["solo", "css", "glassmorphism"],
-    "date": "20-06-2021",
-    "rating": 7.85
-  },
-  {
-    "id": "hacktoberfest21",
     "class": "box original fun",
     "src": "/images/Originals/hacktoberfest_2021.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/hacktoberfest_2021.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/hacktoberfest_2021.webp",
     "href": "https://github.com/Astrogeek77/Hacktoberfest_2021",
     "name": "Hacktoberfest 2021",
-    "tags": ["original", "fun", "host", "hacktoberfest21", "repo host"],
+    "tags": [
+      "original",
+      "fun",
+      "host",
+      "hacktoberfest21",
+      "repo host"
+    ],
     "date": "01-03-2022",
-    "rating": 7.8
+    "rating": 7.8,
+    "id": "https-github-com-astrogeek77-hacktoberfest-2021",
+    "featured": false,
+    "description": "A project exploring original, fun, host."
   },
   {
-    "id": "webProjects2020",
+    "class": "box original cpp",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/CPP_Projects",
+    "name": "CPP Projects",
+    "tags": [
+      "original",
+      "cpp",
+      "problem solving",
+      "learning",
+      "sheets"
+    ],
+    "date": "14-10-2022",
+    "rating": 8.2,
+    "id": "https-github-com-astrogeek77-cpp-projects",
+    "featured": false,
+    "description": "A project exploring original, cpp, problem solving."
+  },
+  {
+    "class": "box original cpp",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Chess_Problems",
+    "name": "Chess Problems",
+    "tags": [
+      "original",
+      "cpp",
+      "problem solving",
+      "learning"
+    ],
+    "date": "21-05-2022",
+    "rating": 8.3,
+    "id": "https-github-com-astrogeek77-chess-problems",
+    "featured": false,
+    "description": "A project exploring original, cpp, problem solving."
+  },
+  {
+    "class": "box mern solo",
+    "src": "/images/Originals/web_projects_2020.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
+    "href": "https://github.com/Astrogeek77/Notes_App",
+    "name": "Notes App (Typescript + react)",
+    "tags": [
+      "mern",
+      "solo",
+      "typescript",
+      "ts",
+      "react",
+      "reactjs",
+      "localstorage"
+    ],
+    "date": "12-09-2023",
+    "rating": 8.4,
+    "id": "https-github-com-astrogeek77-notes-app",
+    "featured": false,
+    "description": "A project exploring mern, solo, typescript."
+  },
+  {
+    "class": "box mern solo",
+    "src": "/images/Originals/web_projects_2020.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
+    "href": "https://github.com/Astrogeek77/Backend_Practice_Projects",
+    "name": "Backend Practice Projects",
+    "tags": [
+      "mern",
+      "solo",
+      "nodejs",
+      "javascript",
+      "js"
+    ],
+    "date": "07-07-2023",
+    "rating": 8.1,
+    "id": "https-github-com-astrogeek77-backend-practice-projects",
+    "featured": false,
+    "description": "A project exploring mern, solo, nodejs."
+  },
+  {
     "class": "box original css fun",
     "src": "/images/Originals/web_projects_2020.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_projects_2020.webp",
     "href": "https://github.com/Astrogeek77/Web_Projects_2020",
     "name": "Web mini Projects 2020",
-    "tags": ["original", "css", "fun", "mini projects", "learning"],
+    "tags": [
+      "original",
+      "css",
+      "fun",
+      "mini projects",
+      "learning"
+    ],
     "date": "08-09-2021",
-    "rating": 7.8
+    "rating": 7.8,
+    "id": "https-github-com-astrogeek77-web-projects-2020",
+    "featured": false,
+    "description": "A project exploring original, css, fun."
   },
   {
-    "id": "rockPaperScissorsGame",
+    "class": "box original css fun",
+    "src": "/images/Originals/web_dev_2021.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Originals/web_dev_2021.webp",
+    "href": "https://github.com/Astrogeek77/Web_Dev_2021",
+    "name": "Web mini Projects 2021",
+    "tags": [
+      "original",
+      "css",
+      "fun",
+      "mini projects",
+      "learning"
+    ],
+    "date": "21-11-2021",
+    "rating": 8,
+    "id": "https-github-com-astrogeek77-web-dev-2021",
+    "featured": false,
+    "description": "A project exploring original, css, fun."
+  },
+  {
     "class": "box fun solo",
     "src": "/images/Games/Rock_Paper_Scissors.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Games/Rock_Paper_Scissors.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Games/Rock_Paper_Scissors.webp",
     "href": "https://github.com/Astrogeek77/Rock-Paper-Scissors-Game",
     "name": "Rock Paper Scissors",
-    "tags": ["fun", "solo", "game"],
+    "tags": [
+      "fun",
+      "solo",
+      "game"
+    ],
     "date": "07-07-2022",
-    "rating": 7.8
+    "rating": 7.8,
+    "id": "https-github-com-astrogeek77-rock-paper-scissors-game",
+    "featured": false,
+    "description": "A project exploring fun, solo, game."
   },
   {
-    "id": "urlShortnerApp",
+    "class": "box challenges original css",
+    "src": "/images/Challenges/dcc-21.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Challenges/dcc-21.webp",
+    "href": "https://github.com/Astrogeek77/Daily_Coding_Challenge_2021",
+    "name": "Daily Coding Challenge 2021",
+    "tags": [
+      "challenges",
+      "original",
+      "css",
+      "learning",
+      "dcc21",
+      "mini projects"
+    ],
+    "date": "25-01-2022",
+    "rating": 8.1,
+    "id": "https-github-com-astrogeek77-daily-coding-challenge-2021",
+    "featured": false,
+    "description": "A project exploring challenges, original, css."
+  },
+  {
+    "class": "box live fun challenges original css",
+    "src": "/images/live/wd-23.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/live/wd-23.webp",
+    "href": "https://github.com/Astrogeek77/Web_Dev_2023",
+    "name": "Web Mini Projects 2023",
+    "tags": [
+      "live",
+      "fun",
+      "challenges",
+      "original",
+      "css",
+      "mini projects"
+    ],
+    "date": "29-12-2023",
+    "rating": 8.4,
+    "id": "https-github-com-astrogeek77-web-dev-2023",
+    "featured": false,
+    "description": "A project exploring live, fun, challenges."
+  },
+  {
+    "class": "box live challenges css",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/CSS_Battles_Codebase",
+    "name": "CSS Battle Competitive Codebase",
+    "tags": [
+      "live",
+      "challenges",
+      "css",
+      "compete",
+      "original"
+    ],
+    "date": "15-07-2023",
+    "rating": 8.2,
+    "id": "https-github-com-astrogeek77-css-battles-codebase",
+    "featured": false,
+    "description": "A project exploring live, challenges, css."
+  },
+  {
+    "class": "box challenges",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/30_Day_of_LC_Javascript",
+    "name": "30 Day LC JS Challenge",
+    "tags": [
+      "challenges",
+      "leetcode",
+      "javascript",
+      "js"
+    ],
+    "date": "03-07-2023",
+    "rating": 8.45,
+    "id": "https-github-com-astrogeek77-30-day-of-lc-javascript",
+    "featured": false,
+    "description": "A project exploring challenges, leetcode, javascript."
+  },
+  {
+    "class": "box practice python",
+    "src": "/images/Challenges/100daysofpython.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/Challenges/100daysofpython.webp",
+    "href": "https://github.com/Astrogeek77/100DaysofPython",
+    "name": "100 Days of Python",
+    "tags": [
+      "practice",
+      "python"
+    ],
+    "date": "14-03-2023",
+    "rating": 8.35,
+    "id": "https-github-com-astrogeek77-100daysofpython",
+    "featured": false,
+    "description": "A project exploring practice, python."
+  },
+  {
     "class": "box solo mern",
     "src": "/images/apps/video-chat-app.webp",
-    "fallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Todo-app-backend",
+    "name": "Backend for todo app",
+    "tags": [
+      "solo",
+      "nodejs",
+      "js",
+      "javascript"
+    ],
+    "date": "15-04-2023",
+    "rating": 8.05,
+    "id": "https-github-com-astrogeek77-todo-app-backend",
+    "featured": false,
+    "description": "A project exploring solo, nodejs, js."
+  },
+  {
+    "class": "box python",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/flask-test-website",
+    "name": "Flask Practice webapp",
+    "tags": [
+      "python",
+      "mysql",
+      "planetscale"
+    ],
+    "date": "04-03-2023",
+    "rating": 8,
+    "id": "https-github-com-astrogeek77-flask-test-website",
+    "featured": false,
+    "description": "A project exploring python, mysql, planetscale."
+  },
+  {
+    "class": "box css",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/CSS-Grid-Layout-Practice",
+    "name": "CSS Layout Practice",
+    "tags": [
+      "css",
+      "grid",
+      "flex",
+      "grid area",
+      "flex box"
+    ],
+    "date": "25-05-2023",
+    "rating": 8,
+    "id": "https-github-com-astrogeek77-css-grid-layout-practice",
+    "featured": false,
+    "description": "A project exploring css, grid, flex."
+  },
+  {
+    "class": "box code live",
+    "src": "/images/code/leetcode-gfg-solutions.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
+    "href": "https://github.com/Astrogeek77/Leetcode_GFG_solutions",
+    "name": "Leetcode-GFG-Solutions",
+    "tags": [
+      "code",
+      "live",
+      "leetcode",
+      "gfg",
+      "geeksforgeeks",
+      "learning",
+      "problem solving"
+    ],
+    "date": "11-09-2023",
+    "rating": 8.25,
+    "id": "https-github-com-astrogeek77-leetcode-gfg-solutions",
+    "featured": false,
+    "description": "A project exploring code, live, leetcode."
+  },
+  {
+    "id": "hospital-management-system",
+    "class": "box java solo",
+    "src": "/images/apps/HMS.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/HMS.webp",
+    "href": "https://github.com/Astrogeek77/Hospital_Management_System",
+    "name": "Hospital Managment System Webapp (JSP + servlets)",
+    "tags": [
+      "java",
+      "solo",
+      "servlets",
+      "jsp",
+      "mysql"
+    ],
+    "date": "13-08-2023",
+    "rating": 8.75,
+    "featured": false,
+    "description": "A project exploring java, solo, servlets."
+  },
+  {
+    "id": "java-practice-projects",
+    "class": "box java live",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Java_web_dev_projects/",
+    "name": "Java Practice Projects",
+    "tags": [
+      "java",
+      "live",
+      "learning"
+    ],
+    "date": "13-08-2023",
+    "rating": 8.24,
+    "featured": false,
+    "description": "A project exploring java, live, learning."
+  },
+  {
+    "class": "box mern live team",
+    "src": "/images/code/leetcode-gfg-solutions.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/code/leetcode-gfg-solutions.webp",
+    "href": "https://github.com/orgs/Aggarwal-Pavitra-Bandhan/repositories",
+    "name": "Matrimonial CMS Webapp",
+    "tags": [
+      "mern",
+      "live",
+      "team",
+      "nodejs",
+      "javascript",
+      "js",
+      "react",
+      "reactjs"
+    ],
+    "date": "26-10-2023",
+    "rating": 8.5,
+    "id": "https-github-com-orgs-aggarwal-pavitra-bandhan-repositories",
+    "featured": false,
+    "description": "A project exploring mern, live, team."
+  },
+  {
+    "class": "box flutter solo",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Flutter_Projects",
+    "name": "Flutter Practice Projects",
+    "tags": [
+      "flutter",
+      "solo",
+      "dart",
+      "mobile",
+      "web",
+      "windows"
+    ],
+    "date": "03-07-2023",
+    "rating": 8.2,
+    "id": "https-github-com-astrogeek77-flutter-projects",
+    "featured": false,
+    "description": "A project exploring flutter, solo, dart."
+  },
+  {
+    "class": "box mern solo",
+    "src": "/images/apps/react_dashboard.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/react_dashboard.webp",
+    "href": "https://github.com/Astrogeek77/React_Dashboard_with_nextauth",
+    "name": "React Dashboard with NextAuth",
+    "tags": [
+      "mern",
+      "solo",
+      "javascript",
+      "js",
+      "nextjs"
+    ],
+    "date": "31-07-2023",
+    "rating": 8.65,
+    "id": "https-github-com-astrogeek77-react-dashboard-with-nextauth",
+    "featured": false,
+    "description": "A project exploring mern, solo, javascript."
+  },
+  {
+    "class": "box mern solo",
+    "src": "/images/apps/next-auth-dashbaord-2.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/next-auth-dashbaord-2.webp",
+    "href": "https://github.com/Astrogeek77/React_Dashboard_with_nextauth_2",
+    "name": "React Dashboard with NextAuth 2",
+    "tags": [
+      "mern",
+      "solo",
+      "ts",
+      "typescript",
+      "nextjs"
+    ],
+    "date": "11-08-2023",
+    "rating": 8.55,
+    "id": "https-github-com-astrogeek77-react-dashboard-with-nextauth-2",
+    "featured": false,
+    "description": "A project exploring mern, solo, ts."
+  },
+  {
+    "class": "box mern solo",
+    "src": "/images/apps/ecomm-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/ecomm-app.webp",
+    "href": "https://github.com/Astrogeek77/Ecommerce_app_with_redux_toolkit",
+    "name": "Ecommerce App with Redux Toolkit",
+    "tags": [
+      "mern",
+      "solo",
+      "redux",
+      "javascript",
+      "js"
+    ],
+    "date": "08-09-2023",
+    "rating": 8.75,
+    "id": "https-github-com-astrogeek77-ecommerce-app-with-redux-toolkit",
+    "featured": false,
+    "description": "A project exploring mern, solo, redux."
+  },
+  {
+    "class": "box solo css",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Glassmorphism",
+    "name": "Glassmorphism",
+    "tags": [
+      "solo",
+      "css",
+      "design"
+    ],
+    "date": "20-06-2021",
+    "rating": 7.85,
+    "id": "https-github-com-astrogeek77-glassmorphism",
+    "featured": false,
+    "description": "A project exploring solo, css, design."
+  },
+  {
+    "class": "box solo",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/file-Share-App",
+    "name": "File Sharing App",
+    "tags": [
+      "solo",
+      "multer",
+      "mongodb"
+    ],
+    "date": "19-09-2022",
+    "rating": 7.9,
+    "id": "https-github-com-astrogeek77-file-share-app",
+    "featured": false,
+    "description": "A project exploring solo, multer, mongodb."
+  },
+  {
+    "class": "box solo mern",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
     "href": "https://github.com/Astrogeek77/url_shortener_app",
     "name": "URL Shortner",
-    "tags": ["solo", "ansi regex", "mongodb", "design"],
+    "tags": [
+      "solo",
+      "ansi regex",
+      "mongodb"
+    ],
     "date": "01-04-2021",
-    "rating": 7.8
+    "rating": 7.8,
+    "id": "https-github-com-astrogeek77-url-shortener-app",
+    "featured": false,
+    "description": "A project exploring solo, ansi regex, mongodb."
+  },
+  {
+    "id": "spring-boot-quiz-backend",
+    "class": "box solo spring java",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/QuizAppBackendSpringBoot",
+    "name": "Spring Boot Backend App",
+    "tags": [
+      "solo",
+      "java",
+      "spring",
+      "spring-boot",
+      "mysql",
+      "reactjs",
+      "jpa"
+    ],
+    "date": "18-12-2023",
+    "rating": 8.65,
+    "featured": false,
+    "description": "A project exploring solo, java, spring."
+  },
+  {
+    "id": "spring-boot-auth-crud",
+    "class": "box solo spring java",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/SpringBootAuth",
+    "name": "Spring Boot Auth App",
+    "tags": [
+      "solo",
+      "java",
+      "spring",
+      "spring-boot",
+      "mysql",
+      "spring-security",
+      "jpa"
+    ],
+    "date": "23-12-2023",
+    "rating": 8.6,
+    "featured": false,
+    "description": "A project exploring solo, java, spring."
+  },
+  {
+    "class": "box code javascript js",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Javascript_DSALGO",
+    "name": "Javascript DSALGO",
+    "tags": [
+      "javascript",
+      "js",
+      "ds",
+      "dsalgo",
+      "data structures",
+      "algorithms",
+      "data structures algorithms"
+    ],
+    "date": "22-06-2024",
+    "rating": 8.5,
+    "id": "https-github-com-astrogeek77-javascript-dsalgo",
+    "featured": false,
+    "description": "A project exploring javascript, js, ds."
+  },
+  {
+    "class": "box markdown",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Astrogeek77",
+    "name": "Github Readme",
+    "tags": [
+      "markdown",
+      "github",
+      ".md",
+      "profile",
+      "readme"
+    ],
+    "date": "15-05-2024",
+    "rating": 8.1,
+    "id": "https-github-com-astrogeek77-astrogeek77",
+    "featured": false,
+    "description": "A project exploring markdown, github, .md."
+  },
+  {
+    "class": "box oracle ebs eps training cognizant",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Cognizant_Oracle_training",
+    "name": "Oracle ERP EBS Training",
+    "tags": [
+      "box",
+      "oracle",
+      "ebs",
+      "eps",
+      "training",
+      "cognizant"
+    ],
+    "date": "26-04-2024",
+    "rating": 8.4,
+    "id": "https-github-com-astrogeek77-cognizant-oracle-training",
+    "featured": false,
+    "description": "A project exploring box, oracle, ebs."
+  },
+  {
+    "class": "box oracle ebs eps training cognizant",
+    "src": "/images/apps/video-chat-app.webp",
+    "FallbackSrc": "https://raw.githubusercontent.com/Astrogeek77/image-resource-folder/main/github-portfolio-resources/apps/video-chat-app.webp",
+    "href": "https://github.com/Astrogeek77/Oracle-Techno-Functional-Course",
+    "name": "Oracle Techno Functional Course",
+    "tags": [
+      "box",
+      "oracle",
+      "ebs",
+      "eps",
+      "training",
+      "cognizant",
+      "p2p",
+      "o2c",
+      "interface",
+      "conversion",
+      "reports"
+    ],
+    "date": "13-07-2024",
+    "rating": 8.3,
+    "id": "https-github-com-astrogeek77-oracle-techno-functional-course",
+    "featured": false,
+    "description": "A project exploring box, oracle, ebs."
   }
 ]
